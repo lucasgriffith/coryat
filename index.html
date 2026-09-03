@@ -137,6 +137,13 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .chip[aria-pressed="true"]{background:var(--brass-soft); border-color:var(--brass); color:var(--ink); font-weight:600}
 .chip .n{font-family:"IBM Plex Mono",monospace; font-size:10px; color:var(--ink-3); margin-left:4px}
 .esec.off .erow{opacity:.4; pointer-events:none}
+.minibtn{background:none; border:1px solid var(--line); border-radius:5px; padding:2px 7px; cursor:pointer;
+  font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; font-weight:600; color:var(--ink-3)}
+.minibtn:hover{border-color:var(--ink-3); color:var(--ink)}
+.editor-top{display:flex; gap:7px; align-items:center; padding:9px 14px; border-bottom:1px solid var(--line); background:var(--surface-2)}
+.editor-top .lbl{font-size:11px; letter-spacing:.11em; text-transform:uppercase; font-weight:600; color:var(--ink-2)}
+.editor-top .spacer{flex:1}
+.erow .mini{display:flex; gap:4px; margin-left:auto; padding-left:8px}
 
 .stage{position:relative; perspective:1600px; margin-bottom:14px}
 .timerbar{height:3px; background:var(--line-2); border-radius:2px; overflow:hidden; margin-bottom:7px}
@@ -14477,7 +14484,18 @@ window.EVENTS=[
   /* ------------------------------------------------ render --------------- */
   function renderDone(){
     el('card').classList.remove('flipped');
-    el('f-kind').textContent='Deck clear'; el('f-tag').textContent='';
+    el('f-tag').textContent='';
+    if(!deck().length){
+      el('f-kind').textContent='Empty deck';
+      el('f-body').innerHTML='<div class="prompt-kicker">Nothing selected</div><div class="prompt">No cards</div>'+
+        '<div class="answer-sub">Open <b>Edit deck</b> and switch on whatever you want to drill.</div>'+
+        '<div class="note">Check all turns the whole library back on; the per-deck rows let you narrow to one subject at a time.</div>';
+      el('btn-reveal').classList.add('hidden'); el('btn-miss').classList.add('hidden');
+      el('btn-good').classList.add('hidden'); el('btn-more').classList.add('hidden');
+      el('hint').textContent='';
+      return;
+    }
+    el('f-kind').textContent='Deck clear';
     el('f-body').innerHTML='<div class="prompt-kicker">Nothing due right now</div><div class="prompt">All caught up</div>'+
       '<div class="answer-sub">'+(sessSeen?esc(sessSeen+' cards this session, '+Math.round(sessRight/sessSeen*100)+'% right.'):'Every card in this deck is scheduled for a later day.')+'</div>'+
       '<div class="note">Add a deck or widen the filters under Edit deck, or keep drilling — extra reps don’t change the schedule.</div>';
@@ -14568,7 +14586,9 @@ window.EVENTS=[
 
   /* ------------------------------------------------ deck editor ---------- */
   function renderDeckBar(){
-    var live=SUBJECTS.filter(function(s){ return store.subj[s.id]&&activeTypes().some(function(t){ return TY[t].s===s.id; }); });
+    var live=SUBJECTS.filter(function(s){
+      return store.subj[s.id]&&itemsFor(s.id).length&&activeTypes().some(function(t){ return TY[t].s===s.id; });
+    });
     var n=deck().length;
     el('deck-summary').innerHTML=live.length
       ? '<b>'+live.length+' deck'+(live.length===1?'':'s')+'</b> — '+esc(live.map(function(s){ return s.name; }).join(', '))+
@@ -14578,13 +14598,20 @@ window.EVENTS=[
     el('opt-timer').setAttribute('aria-pressed',store.opts.timer?'true':'false');
     el('opt-qform').setAttribute('aria-pressed',store.opts.qform?'true':'false');
   }
+  function miniPair(kind,val){
+    return '<span class="mini"><button class="minibtn" data-on="'+kind+'" data-v="'+esc(val)+'">All</button>'+
+      '<button class="minibtn" data-off="'+kind+'" data-v="'+esc(val)+'">None</button></span>';
+  }
   function renderEditor(){
-    var h='';
+    var live=SUBJECTS.filter(function(x){ return store.subj[x.id]; }).length;
+    var h='<div class="editor-top"><span class="lbl">'+live+' of '+SUBJECTS.length+' decks on</span><span class="spacer"></span>'+
+      '<button class="minibtn" data-on="decks" data-v="*">Check all</button>'+
+      '<button class="minibtn" data-off="decks" data-v="*">Uncheck all</button></div>';
     FAMILIES.forEach(function(fam){
       var subs=SUBJECTS.filter(function(s){ return s.fam===fam.id; });
       var on=subs.filter(function(s){ return store.subj[s.id]; }).length;
       h+='<div class="fam"><div class="fam-head"><span class="nm">'+esc(fam.name)+'</span>'+
-        '<span class="cnt">'+on+'/'+subs.length+' on</span><span class="spacer"></span></div>';
+        '<span class="cnt">'+on+'/'+subs.length+' on</span><span class="spacer"></span>'+miniPair('fam',fam.id)+'</div>';
       subs.forEach(function(s){
         var chips=CHIPS.filter(function(c){ return c.s===s.id; });
         h+='<div class="esec'+(store.subj[s.id]?'':' off')+'">'+
@@ -14593,14 +14620,14 @@ window.EVENTS=[
           (store.subj[s.id]?'On':'Off')+'</button></div>'+
           '<div class="erow"><span class="lbl">Ask</span><div class="chips">'+
             chips.map(function(c){ return '<button class="chip" data-chip="'+c.id+'" aria-pressed="'+(store.chips[c.id]?'true':'false')+'">'+esc(c.label)+'</button>'; }).join('')+
-          '</div></div>'+
+          '</div>'+miniPair('chips',s.id)+'</div>'+
           '<div class="erow"><span class="lbl">'+esc(s.filt.label)+'</span><div class="chips">'+
             s.filt.opts.map(function(o){
               var n=s.data.filter(function(d){ return s.filt.of(d).indexOf(o[0])>=0; }).length;
               return '<button class="chip" data-f="'+s.filt.key+'" data-v="'+esc(o[0])+'" aria-pressed="'+(store.filt[s.filt.key][o[0]]?'true':'false')+'">'+
                 esc(o[1])+'<span class="n">'+n+'</span></button>';
             }).join('')+
-          '</div></div></div>';
+          '</div>'+miniPair('filt',s.filt.key)+'</div></div>';
       });
       h+='</div>';
     });
@@ -14611,23 +14638,20 @@ window.EVENTS=[
     this.textContent=nowHidden?'Edit deck':'Done';
     if(!nowHidden) renderEditor();
   });
+  function bulk(kind,val,on){
+    if(kind==='decks') SUBJECTS.forEach(function(x){ store.subj[x.id]=on; });
+    else if(kind==='fam') SUBJECTS.filter(function(x){ return x.fam===val; }).forEach(function(x){ store.subj[x.id]=on; });
+    else if(kind==='chips') CHIPS.filter(function(c){ return c.s===val; }).forEach(function(c){ store.chips[c.id]=on; });
+    else if(kind==='filt') Object.keys(store.filt[val]).forEach(function(k){ store.filt[val][k]=on; });
+  }
   el('editor').addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
-    if(b.dataset.subj){
-      var others=SUBJECTS.filter(function(s){ return s.id!==b.dataset.subj&&store.subj[s.id]; });
-      if(store.subj[b.dataset.subj]&&!others.length) return;
-      store.subj[b.dataset.subj]=!store.subj[b.dataset.subj];
-    } else if(b.dataset.chip){
-      var cid=b.dataset.chip, sub=CHIPS.filter(function(x){ return x.id===cid; })[0].s;
-      var sibs=CHIPS.filter(function(x){ return x.s===sub&&x.id!==cid&&store.chips[x.id]; });
-      if(store.chips[cid]&&!sibs.length) return;
-      store.chips[cid]=!store.chips[cid];
-    } else if(b.dataset.f){
-      var g=b.dataset.f, v=b.dataset.v;
-      var left=Object.keys(store.filt[g]).filter(function(x){ return x!==v&&store.filt[g][x]; });
-      if(store.filt[g][v]&&!left.length) return;
-      store.filt[g][v]=!store.filt[g][v];
-    } else return;
+    if(b.dataset.on!==undefined&&b.dataset.on) bulk(b.dataset.on,b.dataset.v,true);
+    else if(b.dataset.off!==undefined&&b.dataset.off) bulk(b.dataset.off,b.dataset.v,false);
+    else if(b.dataset.subj) store.subj[b.dataset.subj]=!store.subj[b.dataset.subj];
+    else if(b.dataset.chip) store.chips[b.dataset.chip]=!store.chips[b.dataset.chip];
+    else if(b.dataset.f) store.filt[b.dataset.f][b.dataset.v]=!store.filt[b.dataset.f][b.dataset.v];
+    else return;
     save(); clearCache(); renderEditor(); resetQueue();
   });
   el('opt-timer').addEventListener('click',function(){
