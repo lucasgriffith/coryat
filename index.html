@@ -137,6 +137,9 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .chip[aria-pressed="true"]{background:var(--brass-soft); border-color:var(--brass); color:var(--ink); font-weight:600}
 .chip .n{font-family:"IBM Plex Mono",monospace; font-size:10px; color:var(--ink-3); margin-left:4px}
 .esec.off .erow{opacity:.4; pointer-events:none}
+.warn{font-size:11px; font-weight:600; color:var(--miss)}
+.gap{font-size:13.5px; color:var(--miss); max-width:52ch}
+.gap b{font-weight:600}
 .minibtn{background:none; border:1px solid var(--line); border-radius:5px; padding:2px 7px; cursor:pointer;
   font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; font-weight:600; color:var(--ink-3)}
 .minibtn:hover{border-color:var(--ink-3); color:var(--ink)}
@@ -374,6 +377,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
       <button class="btn miss hidden" id="btn-miss">Missed it <kbd>1</kbd></button>
       <button class="btn good hidden" id="btn-good">Got it <kbd>2</kbd></button>
       <button class="btn hidden" id="btn-more">Keep drilling anyway</button>
+      <button class="btn hidden" id="btn-fix">Turn everything back on</button>
     </div>
     <div class="hint" id="hint">Space reveals the answer, then <kbd>1</kbd> missed &middot; <kbd>2</kbd> got it</div>
 
@@ -14492,12 +14496,18 @@ window.EVENTS=[
     }
     el('f-tag').textContent='';
     if(!deck().length){
+      var gaps=deckGaps(), anyOn=SUBJECTS.some(function(x){ return store.subj[x.id]; });
       el('f-kind').textContent='Empty deck';
-      el('f-body').innerHTML='<div class="prompt-kicker">Nothing selected</div><div class="prompt">No cards</div>'+
-        '<div class="answer-sub">Open <b>Edit deck</b> and switch on whatever you want to drill.</div>'+
-        '<div class="note">Check all turns the whole library back on; the per-deck rows let you narrow to one subject at a time.</div>';
+      el('f-body').innerHTML='<div class="prompt-kicker">Nothing to draw from</div><div class="prompt">No cards</div>'+
+        (!anyOn
+          ? '<div class="answer-sub">Every deck is switched off.</div>'
+          : (gaps.length
+              ? '<div class="gap">'+gaps.map(function(g){ return '<b>'+esc(g[0])+'</b> is on, but has '+esc(g[1])+'.'; }).join('<br>')+'</div>'
+              : '<div class="answer-sub">The decks that are on have nothing left to draw.</div>'))+
+        '<div class="note">Open Edit deck to fix it, or switch the whole library back on.</div>';
       el('btn-reveal').classList.add('hidden'); el('btn-miss').classList.add('hidden');
       el('btn-good').classList.add('hidden'); el('btn-more').classList.add('hidden');
+      el('btn-fix').classList.remove('hidden');
       el('hint').textContent='';
       return;
     }
@@ -14506,12 +14516,12 @@ window.EVENTS=[
       '<div class="answer-sub">'+(sessSeen?esc(sessSeen+' cards this session, '+Math.round(sessRight/sessSeen*100)+'% right.'):'Every card in this deck is scheduled for a later day.')+'</div>'+
       '<div class="note">Add a deck or widen the filters under Edit deck, or keep drilling — extra reps don’t change the schedule.</div>';
     el('btn-reveal').classList.add('hidden'); el('btn-miss').classList.add('hidden'); el('btn-good').classList.add('hidden');
-    el('btn-more').classList.remove('hidden');
+    el('btn-more').classList.remove('hidden'); el('btn-fix').classList.add('hidden');
     el('hint').textContent='Come back tomorrow and the 1-day cards will be waiting.';
   }
   function render(){
     renderStats(); renderDeckBar();
-    el('btn-more').classList.add('hidden');
+    el('btn-more').classList.add('hidden'); el('btn-fix').classList.add('hidden');
     if(!current){ renderDone(); return; }
     var p=parse(current), F=faces(current), card=el('card');
     if(flipped){
@@ -14605,15 +14615,35 @@ window.EVENTS=[
   }
 
   /* ------------------------------------------------ deck editor ---------- */
+  // A deck can be switched on and still yield nothing — no card types ticked, or
+  // every filter in its row switched off. Say which, instead of "nothing selected".
+  function subjectGap(s){
+    if(!store.subj[s.id]) return null;
+    var hasChip=CHIPS.some(function(c){ return c.s===s.id&&store.chips[c.id]; });
+    var n=itemsFor(s.id).length, what=s.filt.label.toLowerCase();
+    if(hasChip&&n) return null;
+    if(!hasChip&&!n) return 'no card types and no '+what+' selected';
+    if(!hasChip) return 'no card types selected';
+    return 'no '+what+' selected';
+  }
+  function deckGaps(){
+    var out=[];
+    SUBJECTS.forEach(function(s){ var g=subjectGap(s); if(g) out.push([s.name,g]); });
+    return out;
+  }
   function renderDeckBar(){
     var live=SUBJECTS.filter(function(s){
       return store.subj[s.id]&&itemsFor(s.id).length&&activeTypes().some(function(t){ return TY[t].s===s.id; });
     });
     var n=deck().length;
+    var gaps=deckGaps();
     el('deck-summary').innerHTML=live.length
       ? '<b>'+live.length+' deck'+(live.length===1?'':'s')+'</b> — '+esc(live.map(function(s){ return s.name; }).join(', '))+
-        ' <span class="cnt">· '+fmt(n)+' cards</span>'
-      : '<b>Nothing selected</b> <span class="cnt">· pick at least one deck</span>';
+        ' <span class="cnt">· '+fmt(n)+' cards</span>'+
+        (gaps.length?' <span class="warn">· '+esc(gaps[0][0])+' has '+esc(gaps[0][1])+'</span>':'')
+      : (gaps.length
+          ? '<b>0 cards</b> <span class="warn">· '+esc(gaps[0][0])+' is on, but has '+esc(gaps[0][1])+'</span>'
+          : '<b>Nothing selected</b> <span class="cnt">· pick at least one deck</span>');
     el('opt-timer').textContent='Clock: '+(store.opts.timer?store.opts.timer+'s':'off');
     el('opt-timer').setAttribute('aria-pressed',store.opts.timer?'true':'false');
     el('opt-qform').setAttribute('aria-pressed',store.opts.qform?'true':'false');
@@ -14636,6 +14666,7 @@ window.EVENTS=[
         var chips=CHIPS.filter(function(c){ return c.s===s.id; });
         h+='<div class="esec'+(store.subj[s.id]?'':' off')+'">'+
           '<div class="esec-head"><span class="nm">'+esc(s.name)+'</span><span class="cnt">'+fmt(itemsFor(s.id).length)+' · '+esc(s.note)+'</span>'+
+          (subjectGap(s)?'<span class="warn">'+esc(subjectGap(s))+'</span>':'')+
           '<span class="spacer"></span><button class="toggle" data-subj="'+s.id+'" aria-pressed="'+(store.subj[s.id]?'true':'false')+'">'+
           (store.subj[s.id]?'On':'Off')+'</button></div>'+
           '<div class="erow"><span class="lbl">Ask</span><div class="chips">'+
@@ -14831,6 +14862,12 @@ window.EVENTS=[
   el('btn-miss').addEventListener('click',function(){ grade(false); });
   el('btn-good').addEventListener('click',function(){ grade(true); });
   el('btn-more').addEventListener('click',function(){ extra=true; buildQueue(); nextCard(); });
+  el('btn-fix').addEventListener('click',function(){
+    SUBJECTS.forEach(function(x){ store.subj[x.id]=true; });
+    CHIPS.forEach(function(c){ store.chips[c.id]=true; });
+    Object.keys(store.filt).forEach(function(g){ Object.keys(store.filt[g]).forEach(function(k){ store.filt[g][k]=true; }); });
+    save(); clearCache(); renderEditor(); resetQueue();
+  });
   el('btn-reset').addEventListener('click',function(){
     if(!confirm('Clear every box level, streak and mastery record across all decks?')) return;
     store.cards={}; store.streak=0; store.lastDay=null; sessSeen=0; sessRight=0; served=0; lastWasLapse=false;
