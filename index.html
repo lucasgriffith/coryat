@@ -150,6 +150,9 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .timerbar i{display:block; height:100%; background:var(--brass); width:100%; transform-origin:left center}
 .card{position:relative; height:416px; transform-style:preserve-3d; transition:transform .5s cubic-bezier(.4,.1,.2,1)}
 .card.flipped{transform:rotateY(180deg)}
+.card.snap{transition:none}
+@keyframes cardIn{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
+.face.front.enter{animation:cardIn .19s ease-out}
 .face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
   background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow);
   display:flex; flex-direction:column; overflow:hidden}
@@ -319,7 +322,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
   .erow .lbl{width:100%}
   .pcell .zz{display:none}
 }
-@media (prefers-reduced-motion:reduce){ .card{transition:none} }
+@media (prefers-reduced-motion:reduce){ .card{transition:none} .face.front.enter{animation:none} }
 </style>
 
 <div class="wrap">
@@ -14050,7 +14053,7 @@ window.EVENTS=[
   /* ------------------------------------------------ queue ---------------- */
   var BOX_DAYS={1:0,2:1,3:3,4:7,5:21};
   var queue=[], lapse=[], served=0, lastWasLapse=false;
-  var current=null, flipped=false, sessSeen=0, sessRight=0, extra=false, timedOut=false;
+  var current=null, flipped=false, sessSeen=0, sessRight=0, extra=false, timedOut=false, entering=false;
   function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;} return a; }
   function spread(list,win){
     var pool=list.slice(), out=[], recent=[];
@@ -14080,7 +14083,7 @@ window.EVENTS=[
     if(useLapse){ current=lapse.shift().k; lastWasLapse=true; }
     else if(queue.length){ current=queue.shift(); lastWasLapse=false; }
     else current=null;
-    served++; flipped=false; timedOut=false;
+    served++; flipped=false; timedOut=false; entering=true;
     render();
     if(current) startTimer();
   }
@@ -14483,7 +14486,10 @@ window.EVENTS=[
 
   /* ------------------------------------------------ render --------------- */
   function renderDone(){
-    el('card').classList.remove('flipped');
+    var c=el('card');
+    if(c.classList.contains('flipped')){
+      c.classList.add('snap'); c.classList.remove('flipped'); void c.offsetWidth; c.classList.remove('snap');
+    }
     el('f-tag').textContent='';
     if(!deck().length){
       el('f-kind').textContent='Empty deck';
@@ -14507,12 +14513,26 @@ window.EVENTS=[
     renderStats(); renderDeckBar();
     el('btn-more').classList.add('hidden');
     if(!current){ renderDone(); return; }
-    var p=parse(current), F=faces(current);
-    el('card').classList.toggle('flipped',flipped);
+    var p=parse(current), F=faces(current), card=el('card');
+    if(flipped){
+      card.classList.add('flipped');
+    } else if(card.classList.contains('flipped')){
+      // Rotating back would parade the next card's answer past the viewer for
+      // a quarter second, so cut straight to the front instead.
+      card.classList.add('snap');
+      card.classList.remove('flipped');
+      void card.offsetWidth;
+      card.classList.remove('snap');
+    }
     el('f-kind').textContent=TY[p.t].k; el('f-tag').textContent=F.ftag;
     el('b-tag').innerHTML=timedOut?'<span class="late">out of time</span>':esc(F.tag);
     el('f-body').innerHTML=F.front; el('b-body').innerHTML=F.back;
     hydrateMaps(el('f-body'),current); hydrateMaps(el('b-body'),current);
+    if(entering){
+      var front=card.querySelector('.face.front');
+      front.classList.remove('enter'); void front.offsetWidth; front.classList.add('enter');
+      entering=false;
+    }
     el('btn-reveal').classList.toggle('hidden',flipped);
     el('btn-miss').classList.toggle('hidden',!flipped);
     el('btn-good').classList.toggle('hidden',!flipped);
