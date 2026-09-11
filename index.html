@@ -21,51 +21,51 @@ img{max-width:100%}
 </head>
 <body>
 <title>Coryat</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --paper:#EDF0EE; --surface:#FFFFFF; --surface-2:#F6F8F6;
-  --ink:#16211F; --ink-2:#4A5B58; --ink-3:#7C8D8A;
-  --line:#D3DAD7; --line-2:#E4E9E6;
-  --brass:#A87422; --brass-soft:#F0E4CC;
-  --sea:#E7EEEC; --land:#B4C4C0; --land-2:#A3B4B0;
-  --good:#2C7355; --good-soft:#DCEBE3;
-  --miss:#A9432B; --miss-soft:#F3DFD8;
-  --shadow:0 1px 2px rgba(20,35,32,.06), 0 8px 24px -12px rgba(20,35,32,.24);
-  --grid:rgba(22,33,31,.055);
-  --t-alkali:#F0DEC0; --t-alkaline:#EAE3C6; --t-trans:#DFE3DC; --t-post:#D5DCDF;
-  --t-metalloid:#DCE0CB; --t-nonmetal:#CFE2D8; --t-halogen:#C6DDDD; --t-noble:#BDD3DE;
-  --t-lan:#E4D6E0; --t-act:#E8D2CE;
+  --paper:#EBE4D2; --surface:#F7F2E4; --surface-2:#E6DDC7;
+  --ink:#1E3A2B; --ink-2:#46594A; --ink-3:#6E7C69;
+  --line:#CFC5A8; --line-2:#DFD7BF;
+  --brass:#946E1C; --brass-soft:#EFE1BB;
+  --sea:#F2ECDB; --land:#B7C1A6; --land-2:#A6B195;
+  --good:#2F6B45; --good-soft:#DBE7D5;
+  --miss:#9C3B24; --miss-soft:#F0DCD1;
+  --shadow:0 1px 2px rgba(30,58,43,.07), 0 8px 24px -12px rgba(30,58,43,.28);
+  --grid:rgba(30,58,43,.05);
+  --t-alkali:#F0D7A6; --t-alkaline:#E4D5B0; --t-trans:#CFD4BC; --t-post:#C4CFC4;
+  --t-metalloid:#D7D3AE; --t-nonmetal:#C6D6C2; --t-halogen:#BFD1C8; --t-noble:#C3CCD3;
+  --t-lan:#DCCFC6; --t-act:#E2C9BE;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#0D1413; --surface:#161F1E; --surface-2:#1C2726;
-    --ink:#E7EDEA; --ink-2:#A3B3B0; --ink-3:#788B88;
-    --line:#2A3735; --line-2:#222E2D;
-    --brass:#D6A445; --brass-soft:#3A2F19;
-    --sea:#131C1B; --land:#2E3D3B; --land-2:#3A4B48;
-    --good:#5CB98D; --good-soft:#1B3229;
-    --miss:#E0876B; --miss-soft:#33201A;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -14px rgba(0,0,0,.7);
-    --grid:rgba(231,237,234,.05);
-    --t-alkali:#3E3323; --t-alkaline:#3A3626; --t-trans:#29332F; --t-post:#26323A;
-    --t-metalloid:#2F3527; --t-nonmetal:#1F352C; --t-halogen:#1D3536; --t-noble:#22323D;
-    --t-lan:#362B34; --t-act:#3A2C2A;
+    --paper:#12241B; --surface:#1A2F24; --surface-2:#213829;
+    --ink:#EFE7D2; --ink-2:#B4BFA9; --ink-3:#8A9785;
+    --line:#2E4735; --line-2:#263B2D;
+    --brass:#E4BE6A; --brass-soft:#3A3018;
+    --sea:#152820; --land:#33513C; --land-2:#3E5E46;
+    --good:#6FBE8A; --good-soft:#1D3527;
+    --miss:#DE8A6E; --miss-soft:#37211A;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.75);
+    --grid:rgba(239,231,210,.045);
+    --t-alkali:#3E3520; --t-alkaline:#393521; --t-trans:#2B3A2A; --t-post:#26362C;
+    --t-metalloid:#34381F; --t-nonmetal:#22392B; --t-halogen:#1F3A33; --t-noble:#26333C;
+    --t-lan:#3A2F2A; --t-act:#3E2F28;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0D1413; --surface:#161F1E; --surface-2:#1C2726;
-  --ink:#E7EDEA; --ink-2:#A3B3B0; --ink-3:#788B88;
-  --line:#2A3735; --line-2:#222E2D;
-  --brass:#D6A445; --brass-soft:#3A2F19;
-  --sea:#131C1B; --land:#2E3D3B; --land-2:#3A4B48;
-  --good:#5CB98D; --good-soft:#1B3229;
-  --miss:#E0876B; --miss-soft:#33201A;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -14px rgba(0,0,0,.7);
-  --grid:rgba(231,237,234,.05);
-  --t-alkali:#3E3323; --t-alkaline:#3A3626; --t-trans:#29332F; --t-post:#26323A;
-  --t-metalloid:#2F3527; --t-nonmetal:#1F352C; --t-halogen:#1D3536; --t-noble:#22323D;
-  --t-lan:#362B34; --t-act:#3A2C2A;
+  --paper:#12241B; --surface:#1A2F24; --surface-2:#213829;
+  --ink:#EFE7D2; --ink-2:#B4BFA9; --ink-3:#8A9785;
+  --line:#2E4735; --line-2:#263B2D;
+  --brass:#E4BE6A; --brass-soft:#3A3018;
+  --sea:#152820; --land:#33513C; --land-2:#3E5E46;
+  --good:#6FBE8A; --good-soft:#1D3527;
+  --miss:#DE8A6E; --miss-soft:#37211A;
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(0,0,0,.75);
+  --grid:rgba(239,231,210,.045);
+  --t-alkali:#3E3520; --t-alkaline:#393521; --t-trans:#2B3A2A; --t-post:#26362C;
+  --t-metalloid:#34381F; --t-nonmetal:#22392B; --t-halogen:#1F3A33; --t-noble:#26333C;
+  --t-lan:#3A2F2A; --t-act:#3E2F28;
 }
 
 *{box-sizing:border-box}
@@ -73,8 +73,8 @@ body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:Archivo,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
   background-image:
-    repeating-linear-gradient(to right, var(--grid) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(to bottom, var(--grid) 0 1px, transparent 1px 64px);
+    repeating-linear-gradient(45deg, var(--grid) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(-45deg, var(--grid) 0 1px, transparent 1px 7px);
 }
 button{font:inherit;color:inherit}
 h1,h2,h3{margin:0; text-wrap:balance}
@@ -82,9 +82,9 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .wrap{max-width:980px; margin:0 auto; padding:18px 20px 56px}
 .hidden{display:none !important}
 
-.mast{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:1px solid var(--line)}
-.mast h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; letter-spacing:-.01em}
-.mast .sub{font-size:12.5px; color:var(--ink-3); font-style:italic; font-family:Spectral,Georgia,serif}
+.mast{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; padding-bottom:11px; border-bottom:4px double var(--brass)}
+.mast h1{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-weight:700; font-size:28px; letter-spacing:.01em}
+.mast .sub{font-size:10px; color:var(--ink-3); font-family:Archivo,sans-serif; letter-spacing:.19em; text-transform:uppercase}
 .mast .spacer{flex:1}
 .tabs{display:flex; gap:2px; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; padding:2px}
 .tabs button{background:none; border:0; padding:5px 13px; border-radius:5px; cursor:pointer;
@@ -157,7 +157,8 @@ h1,h2,h3{margin:0; text-wrap:balance}
 @keyframes cardIn{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
 .face.front.enter{animation:cardIn .19s ease-out}
 .face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
-  background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow);
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  box-shadow:var(--shadow), inset 0 0 0 5px var(--surface), inset 0 0 0 6px var(--brass-soft);
   display:flex; flex-direction:column; overflow:hidden}
 .face.back{transform:rotateY(180deg)}
 .face-top{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:9px 16px;
@@ -169,22 +170,22 @@ h1,h2,h3{margin:0; text-wrap:balance}
   justify-content:safe center;
   gap:10px; padding:16px 26px; min-height:0; text-align:center; overflow-y:auto}
 .prompt-kicker{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
-.prompt{font-family:Spectral,Georgia,serif; font-weight:600; font-size:clamp(26px,5.4vw,42px); line-height:1.1; letter-spacing:-.015em}
+.prompt{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-weight:700; font-size:clamp(26px,5.4vw,42px); line-height:1.12; letter-spacing:0}
 .prompt.sm{font-size:clamp(18px,3.1vw,25px); line-height:1.3; max-width:30ch}
 .prompt.xs{font-size:clamp(16px,2.5vw,20px); line-height:1.4; max-width:40ch; font-style:italic}
-.answer{font-family:Spectral,Georgia,serif; font-weight:600; font-size:clamp(25px,5vw,40px); line-height:1.1; letter-spacing:-.015em; color:var(--brass)}
+.answer{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-weight:700; font-size:clamp(25px,5vw,40px); line-height:1.12; letter-spacing:0; color:var(--brass)}
 .answer.sm{font-size:clamp(20px,3.6vw,29px)}
 .qword{font-family:Archivo,sans-serif; font-size:.45em; font-weight:500; color:var(--ink-3); letter-spacing:.02em; display:block; margin-bottom:2px}
 .answer-sub{font-size:14.5px; color:var(--ink-2)}
 .answer-sub b{font-weight:600; color:var(--ink)}
-.note{font-family:Spectral,Georgia,serif; font-style:italic; font-size:13.5px; color:var(--ink-2);
+.note{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-style:italic; font-size:13.5px; color:var(--ink-2);
   max-width:58ch; border-top:1px solid var(--line-2); padding-top:9px}
 .chars{font-size:13px; color:var(--ink-2)}
 .chars b{color:var(--ink)}
 .vplist{display:flex; flex-direction:column; gap:3px; font-size:15px}
 .vplist .yr{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-3); margin-left:7px}
-.bigsym{font-family:Spectral,Georgia,serif; font-weight:600; font-size:clamp(52px,12vw,98px); line-height:1;
-  letter-spacing:-.02em; color:var(--brass)}
+.bigsym{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-weight:700; font-size:clamp(52px,12vw,98px); line-height:1;
+  letter-spacing:0; color:var(--brass)}
 .flagbox{background:#fff; border:1px solid var(--line); border-radius:6px; padding:6px; box-shadow:var(--shadow); line-height:0}
 .flagbox img{display:block; width:min(300px,52vw); aspect-ratio:4/3; object-fit:cover; border-radius:2px}
 .flagbox.sm img{width:min(128px,27vw)}
@@ -301,20 +302,20 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .tbl tr:last-child td{border-bottom:0}
 .tbl .num{font-family:"IBM Plex Mono",monospace; color:var(--ink-3); font-variant-numeric:tabular-nums; white-space:nowrap}
 .tbl .nm{font-weight:600}
-.tbl .it{font-family:Spectral,Georgia,serif; font-style:italic; color:var(--ink-2)}
+.tbl .it{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-style:italic; color:var(--ink-2)}
 .scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface)}
 .elemdetail{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:13px 15px; margin-bottom:12px;
   display:flex; gap:15px; align-items:flex-start; min-height:92px}
-.elemdetail .sy{font-family:Spectral,Georgia,serif; font-weight:600; font-size:46px; line-height:1; color:var(--brass); flex:0 0 auto}
+.elemdetail .sy{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-weight:600; font-size:46px; line-height:1; color:var(--brass); flex:0 0 auto}
 .elemdetail .nm{font-size:17px; font-weight:600}
 .elemdetail .meta{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-3); margin:2px 0 5px}
-.elemdetail .lore{font-family:Spectral,Georgia,serif; font-style:italic; font-size:13.5px; color:var(--ink-2)}
+.elemdetail .lore{font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-style:italic; font-size:13.5px; color:var(--ink-2)}
 .ptwrap{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px}
 .ptable.ref .pcell{cursor:pointer}
 .ptable.ref .pcell:hover{outline:2px solid var(--brass); outline-offset:-1px}
-.empty{padding:34px; text-align:center; color:var(--ink-3); font-family:Spectral,Georgia,serif; font-style:italic}
+.empty{padding:34px; text-align:center; color:var(--ink-3); font-family:"Bodoni Moda",Didot,"Times New Roman",Georgia,serif; font-style:italic}
 .foot{margin-top:24px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;
-  font-size:12px; color:var(--ink-3); border-top:1px solid var(--line); padding-top:14px}
+  font-size:12px; color:var(--ink-3); border-top:4px double var(--brass); padding-top:14px}
 .foot button{background:none; border:0; text-decoration:underline; cursor:pointer; color:var(--ink-3); padding:0; font-size:12px}
 .foot .spacer{flex:1}
 
@@ -353,6 +354,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
       <div class="opts">
         <button class="opt" id="opt-timer" title="Buzzer clock">Clock: off</button>
         <button class="opt" id="opt-qform" aria-pressed="false" title="Respond in the form of a question">Question form</button>
+        <button class="opt" id="opt-cram" aria-pressed="false" title="Run straight through every card in the deck, ignoring the review schedule">Cram</button>
       </div>
       <button class="linkbtn" id="btn-edit">Edit deck</button>
     </div>
@@ -13814,6 +13816,2607 @@ window.EVENTS=[
     "note": "Volodymyr Zelensky reportedly replied that he needed ammunition, not a ride; it became the largest European land war since 1945."
   }
 ];
+window.NFL=[
+  {
+    "season": 1966,
+    "label": "Super Bowl I",
+    "champ": "Green Bay Packers",
+    "runner": "Kansas City Chiefs",
+    "score": "35-10",
+    "fmvp": "Bart Starr",
+    "mvp": "Bart Starr",
+    "note": "Vince Lombardi's Packers won the first AFL-NFL World Championship Game, which was broadcast simultaneously by both CBS and NBC."
+  },
+  {
+    "season": 1967,
+    "label": "Super Bowl II",
+    "champ": "Green Bay Packers",
+    "runner": "Oakland Raiders",
+    "score": "33-14",
+    "fmvp": "Bart Starr",
+    "mvp": "Johnny Unitas",
+    "note": "Lombardi's last game as Packers head coach, and Bart Starr became the only player to win MVP of the first two Super Bowls."
+  },
+  {
+    "season": 1968,
+    "label": "Super Bowl III",
+    "champ": "New York Jets",
+    "runner": "Baltimore Colts",
+    "score": "16-7",
+    "fmvp": "Joe Namath",
+    "mvp": "Earl Morrall",
+    "note": "Joe Namath guaranteed victory days before the game, and the Jets' upset legitimized the AFL ahead of the merger."
+  },
+  {
+    "season": 1969,
+    "label": "Super Bowl IV",
+    "champ": "Kansas City Chiefs",
+    "runner": "Minnesota Vikings",
+    "score": "23-7",
+    "fmvp": "Len Dawson",
+    "mvp": "Roman Gabriel",
+    "note": "The last game before the AFL-NFL merger, won by Hank Stram's Chiefs, the only coach ever mic'd up for a Super Bowl broadcast."
+  },
+  {
+    "season": 1970,
+    "label": "Super Bowl V",
+    "champ": "Baltimore Colts",
+    "runner": "Dallas Cowboys",
+    "score": "16-13",
+    "fmvp": "Chuck Howley",
+    "mvp": "John Brodie",
+    "note": "Nicknamed the 'Blunder Bowl' for its 11 turnovers; Dallas linebacker Chuck Howley is still the only MVP from the losing team."
+  },
+  {
+    "season": 1971,
+    "label": "Super Bowl VI",
+    "champ": "Dallas Cowboys",
+    "runner": "Miami Dolphins",
+    "score": "24-3",
+    "fmvp": "Roger Staubach",
+    "mvp": "Alan Page",
+    "note": "Dallas held Miami to a Super Bowl-record low three points, the only time a team has failed to score a touchdown until Super Bowl LIII."
+  },
+  {
+    "season": 1972,
+    "label": "Super Bowl VII",
+    "champ": "Miami Dolphins",
+    "runner": "Washington Redskins",
+    "score": "14-7",
+    "fmvp": "Jake Scott",
+    "mvp": "Larry Brown",
+    "note": "Miami completed the NFL's only perfect season at 17-0, though Garo Yepremian's botched field goal became the game's lasting blooper."
+  },
+  {
+    "season": 1973,
+    "label": "Super Bowl VIII",
+    "champ": "Miami Dolphins",
+    "runner": "Minnesota Vikings",
+    "score": "24-7",
+    "fmvp": "Larry Csonka",
+    "mvp": "O.J. Simpson",
+    "note": "Larry Csonka ran for 145 yards as Don Shula's Dolphins became the first AFC team to repeat as champions."
+  },
+  {
+    "season": 1974,
+    "label": "Super Bowl IX",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Minnesota Vikings",
+    "score": "16-6",
+    "fmvp": "Franco Harris",
+    "mvp": "Ken Stabler",
+    "note": "The first title for the Steelers franchise, whose Steel Curtain defense allowed just 17 rushing yards."
+  },
+  {
+    "season": 1975,
+    "label": "Super Bowl X",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Dallas Cowboys",
+    "score": "21-17",
+    "fmvp": "Lynn Swann",
+    "mvp": "Fran Tarkenton",
+    "note": "Lynn Swann's acrobatic 64-yard touchdown catch capped a 161-yard day and made him the first wide receiver named Super Bowl MVP."
+  },
+  {
+    "season": 1976,
+    "label": "Super Bowl XI",
+    "champ": "Oakland Raiders",
+    "runner": "Minnesota Vikings",
+    "score": "32-14",
+    "fmvp": "Fred Biletnikoff",
+    "mvp": "Bert Jones",
+    "note": "John Madden's Raiders won their first title and handed Minnesota its fourth Super Bowl loss in four tries."
+  },
+  {
+    "season": 1977,
+    "label": "Super Bowl XII",
+    "champ": "Dallas Cowboys",
+    "runner": "Denver Broncos",
+    "score": "27-10",
+    "fmvp": "Harvey Martin & Randy White",
+    "mvp": "Walter Payton",
+    "note": "The only Super Bowl with co-MVPs, both Cowboys defensive linemen, after Dallas forced eight Denver turnovers."
+  },
+  {
+    "season": 1978,
+    "label": "Super Bowl XIII",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Dallas Cowboys",
+    "score": "35-31",
+    "fmvp": "Terry Bradshaw",
+    "mvp": "Terry Bradshaw",
+    "note": "Pittsburgh became the first three-time champion; Cowboys tight end Jackie Smith's dropped touchdown pass is a lasting what-if."
+  },
+  {
+    "season": 1979,
+    "label": "Super Bowl XIV",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Los Angeles Rams",
+    "score": "31-19",
+    "fmvp": "Terry Bradshaw",
+    "mvp": "Earl Campbell",
+    "note": "John Stallworth's 73-yard catch on a third-and-eight flea-flicker route sealed a fourth Steelers title in six years."
+  },
+  {
+    "season": 1980,
+    "label": "Super Bowl XV",
+    "champ": "Oakland Raiders",
+    "runner": "Philadelphia Eagles",
+    "score": "27-10",
+    "fmvp": "Jim Plunkett",
+    "mvp": "Brian Sipe",
+    "note": "The Raiders became the first wild card team to win a Super Bowl, behind reclamation-project quarterback Jim Plunkett."
+  },
+  {
+    "season": 1981,
+    "label": "Super Bowl XVI",
+    "champ": "San Francisco 49ers",
+    "runner": "Cincinnati Bengals",
+    "score": "26-21",
+    "fmvp": "Joe Montana",
+    "mvp": "Ken Anderson",
+    "note": "Bill Walsh's West Coast offense delivered the first of five 49ers titles, preserved by a goal-line stand in the third quarter."
+  },
+  {
+    "season": 1982,
+    "label": "Super Bowl XVII",
+    "champ": "Washington Redskins",
+    "runner": "Miami Dolphins",
+    "score": "27-17",
+    "fmvp": "John Riggins",
+    "mvp": "Mark Moseley",
+    "note": "John Riggins' fourth-and-one, 43-yard touchdown run on '70 Chip' is one of the most famous plays in Super Bowl history."
+  },
+  {
+    "season": 1983,
+    "label": "Super Bowl XVIII",
+    "champ": "Los Angeles Raiders",
+    "runner": "Washington Redskins",
+    "score": "38-9",
+    "fmvp": "Marcus Allen",
+    "mvp": "Joe Theismann",
+    "note": "Marcus Allen's 74-yard reversal-of-field touchdown run broke the game open against a Washington team that had won 14 games."
+  },
+  {
+    "season": 1984,
+    "label": "Super Bowl XIX",
+    "champ": "San Francisco 49ers",
+    "runner": "Miami Dolphins",
+    "score": "38-16",
+    "fmvp": "Joe Montana",
+    "mvp": "Dan Marino",
+    "note": "Joe Montana outdueled Dan Marino, who had thrown a then-record 48 touchdowns and never returned to a Super Bowl."
+  },
+  {
+    "season": 1985,
+    "label": "Super Bowl XX",
+    "champ": "Chicago Bears",
+    "runner": "New England Patriots",
+    "score": "46-10",
+    "fmvp": "Richard Dent",
+    "mvp": "Marcus Allen",
+    "note": "Buddy Ryan's 46 defense produced the most lopsided rout to that point, and William 'The Refrigerator' Perry scored a touchdown."
+  },
+  {
+    "season": 1986,
+    "label": "Super Bowl XXI",
+    "champ": "New York Giants",
+    "runner": "Denver Broncos",
+    "score": "39-20",
+    "fmvp": "Phil Simms",
+    "mvp": "Lawrence Taylor",
+    "note": "Phil Simms completed 22 of 25 passes for a Super Bowl-record 88 percent completion rate, still the standard for passing accuracy."
+  },
+  {
+    "season": 1987,
+    "label": "Super Bowl XXII",
+    "champ": "Washington Redskins",
+    "runner": "Denver Broncos",
+    "score": "42-10",
+    "fmvp": "Doug Williams",
+    "mvp": "John Elway",
+    "note": "Doug Williams became the first Black quarterback to win a Super Bowl, throwing four touchdowns in a 35-point second quarter."
+  },
+  {
+    "season": 1988,
+    "label": "Super Bowl XXIII",
+    "champ": "San Francisco 49ers",
+    "runner": "Cincinnati Bengals",
+    "score": "20-16",
+    "fmvp": "Jerry Rice",
+    "mvp": "Boomer Esiason",
+    "note": "Joe Montana's 92-yard drive ended with a John Taylor touchdown catch with 34 seconds left, in Bill Walsh's final game."
+  },
+  {
+    "season": 1989,
+    "label": "Super Bowl XXIV",
+    "champ": "San Francisco 49ers",
+    "runner": "Denver Broncos",
+    "score": "55-10",
+    "fmvp": "Joe Montana",
+    "mvp": "Joe Montana",
+    "note": "The most lopsided Super Bowl ever, a 45-point rout in which Joe Montana threw five touchdown passes."
+  },
+  {
+    "season": 1990,
+    "label": "Super Bowl XXV",
+    "champ": "New York Giants",
+    "runner": "Buffalo Bills",
+    "score": "20-19",
+    "fmvp": "Ottis Anderson",
+    "mvp": "Joe Montana",
+    "note": "Scott Norwood's 47-yard field goal sailed 'wide right' as time expired, and Bill Parcells' Giants held the ball for over 40 minutes."
+  },
+  {
+    "season": 1991,
+    "label": "Super Bowl XXVI",
+    "champ": "Washington Redskins",
+    "runner": "Buffalo Bills",
+    "score": "37-24",
+    "fmvp": "Mark Rypien",
+    "mvp": "Thurman Thomas",
+    "note": "Buffalo lost a second straight Super Bowl, and MVP Thurman Thomas famously missed the first two plays after losing his helmet."
+  },
+  {
+    "season": 1992,
+    "label": "Super Bowl XXVII",
+    "champ": "Dallas Cowboys",
+    "runner": "Buffalo Bills",
+    "score": "52-17",
+    "fmvp": "Troy Aikman",
+    "mvp": "Steve Young",
+    "note": "Buffalo committed a record nine turnovers, and Leon Lett's showboating fumble at the goal line was swatted away by Don Beebe."
+  },
+  {
+    "season": 1993,
+    "label": "Super Bowl XXVIII",
+    "champ": "Dallas Cowboys",
+    "runner": "Buffalo Bills",
+    "score": "30-13",
+    "fmvp": "Emmitt Smith",
+    "mvp": "Emmitt Smith",
+    "note": "Buffalo's fourth consecutive Super Bowl loss, a mark of futility and endurance no other franchise has matched."
+  },
+  {
+    "season": 1994,
+    "label": "Super Bowl XXIX",
+    "champ": "San Francisco 49ers",
+    "runner": "San Diego Chargers",
+    "score": "49-26",
+    "fmvp": "Steve Young",
+    "mvp": "Steve Young",
+    "note": "Steve Young threw a Super Bowl-record six touchdown passes and asked a teammate to 'get the monkey off my back' afterward."
+  },
+  {
+    "season": 1995,
+    "label": "Super Bowl XXX",
+    "champ": "Dallas Cowboys",
+    "runner": "Pittsburgh Steelers",
+    "score": "27-17",
+    "fmvp": "Larry Brown",
+    "mvp": "Brett Favre",
+    "note": "Cornerback Larry Brown's two interceptions of Neil O'Donnell gave Dallas its third title in four years."
+  },
+  {
+    "season": 1996,
+    "label": "Super Bowl XXXI",
+    "champ": "Green Bay Packers",
+    "runner": "New England Patriots",
+    "score": "35-21",
+    "fmvp": "Desmond Howard",
+    "mvp": "Brett Favre",
+    "note": "Desmond Howard's 99-yard kickoff return made him the only special teams player ever named Super Bowl MVP."
+  },
+  {
+    "season": 1997,
+    "label": "Super Bowl XXXII",
+    "champ": "Denver Broncos",
+    "runner": "Green Bay Packers",
+    "score": "31-24",
+    "fmvp": "Terrell Davis",
+    "mvp": "Brett Favre & Barry Sanders",
+    "note": "John Elway's 'Helicopter' dive on third down typified a win that ended a 13-year AFC losing streak in the Super Bowl."
+  },
+  {
+    "season": 1998,
+    "label": "Super Bowl XXXIII",
+    "champ": "Denver Broncos",
+    "runner": "Atlanta Falcons",
+    "score": "34-19",
+    "fmvp": "John Elway",
+    "mvp": "Terrell Davis",
+    "note": "John Elway won MVP in the final game of his career, and Denver head coach Mike Shanahan beat his former Falcons assistant Dan Reeves."
+  },
+  {
+    "season": 1999,
+    "label": "Super Bowl XXXIV",
+    "champ": "St. Louis Rams",
+    "runner": "Tennessee Titans",
+    "score": "23-16",
+    "fmvp": "Kurt Warner",
+    "mvp": "Kurt Warner",
+    "note": "'One Yard Short' — Mike Jones tackled Kevin Dyson at the one-yard line as time expired to preserve the Greatest Show on Turf's title."
+  },
+  {
+    "season": 2000,
+    "label": "Super Bowl XXXV",
+    "champ": "Baltimore Ravens",
+    "runner": "New York Giants",
+    "score": "34-7",
+    "fmvp": "Ray Lewis",
+    "mvp": "Marshall Faulk",
+    "note": "Baltimore's record-setting defense allowed no offensive touchdown, and Ray Lewis became the rare defensive MVP."
+  },
+  {
+    "season": 2001,
+    "label": "Super Bowl XXXVI",
+    "champ": "New England Patriots",
+    "runner": "St. Louis Rams",
+    "score": "20-17",
+    "fmvp": "Tom Brady",
+    "mvp": "Kurt Warner",
+    "note": "Adam Vinatieri's 48-yard field goal as time expired beat the heavily favored Rams and launched the Patriots dynasty."
+  },
+  {
+    "season": 2002,
+    "label": "Super Bowl XXXVII",
+    "champ": "Tampa Bay Buccaneers",
+    "runner": "Oakland Raiders",
+    "score": "48-21",
+    "fmvp": "Dexter Jackson",
+    "mvp": "Rich Gannon",
+    "note": "Jon Gruden beat the Raiders team he had coached a year earlier, as Tampa Bay returned three of five interceptions for touchdowns."
+  },
+  {
+    "season": 2003,
+    "label": "Super Bowl XXXVIII",
+    "champ": "New England Patriots",
+    "runner": "Carolina Panthers",
+    "score": "32-29",
+    "fmvp": "Tom Brady",
+    "mvp": "Peyton Manning & Steve McNair",
+    "note": "A scoreless first quarter gave way to 37 fourth-quarter points before Adam Vinatieri won it again with four seconds left."
+  },
+  {
+    "season": 2004,
+    "label": "Super Bowl XXXIX",
+    "champ": "New England Patriots",
+    "runner": "Philadelphia Eagles",
+    "score": "24-21",
+    "fmvp": "Deion Branch",
+    "mvp": "Peyton Manning",
+    "note": "New England won its third title in four years; Deion Branch tied a record with 11 catches."
+  },
+  {
+    "season": 2005,
+    "label": "Super Bowl XL",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Seattle Seahawks",
+    "score": "21-10",
+    "fmvp": "Hines Ward",
+    "mvp": "Shaun Alexander",
+    "note": "Bill Cowher won his only title, capping Pittsburgh's run as the first sixth seed to win a Super Bowl and Jerome Bettis' farewell."
+  },
+  {
+    "season": 2006,
+    "label": "Super Bowl XLI",
+    "champ": "Indianapolis Colts",
+    "runner": "Chicago Bears",
+    "score": "29-17",
+    "fmvp": "Peyton Manning",
+    "mvp": "LaDainian Tomlinson",
+    "note": "Played in steady rain, it was the first Super Bowl won by a Black head coach, Tony Dungy."
+  },
+  {
+    "season": 2007,
+    "label": "Super Bowl XLII",
+    "champ": "New York Giants",
+    "runner": "New England Patriots",
+    "score": "17-14",
+    "fmvp": "Eli Manning",
+    "mvp": "Tom Brady",
+    "note": "The Giants ended New England's bid for a 19-0 season on David Tyree's helmet catch and a late Plaxico Burress touchdown."
+  },
+  {
+    "season": 2008,
+    "label": "Super Bowl XLIII",
+    "champ": "Pittsburgh Steelers",
+    "runner": "Arizona Cardinals",
+    "score": "27-23",
+    "fmvp": "Santonio Holmes",
+    "mvp": "Peyton Manning",
+    "note": "James Harrison's 100-yard interception return ended the first half, and Santonio Holmes' toe-tap catch won it with 35 seconds left."
+  },
+  {
+    "season": 2009,
+    "label": "Super Bowl XLIV",
+    "champ": "New Orleans Saints",
+    "runner": "Indianapolis Colts",
+    "score": "31-17",
+    "fmvp": "Drew Brees",
+    "mvp": "Peyton Manning",
+    "note": "Sean Payton's surprise onside kick to open the second half, 'Ambush,' turned the game and delivered the Saints' first title."
+  },
+  {
+    "season": 2010,
+    "label": "Super Bowl XLV",
+    "champ": "Green Bay Packers",
+    "runner": "Pittsburgh Steelers",
+    "score": "31-25",
+    "fmvp": "Aaron Rodgers",
+    "mvp": "Tom Brady",
+    "note": "Green Bay won its record 13th NFL championship, with Aaron Rodgers throwing for 304 yards and three touchdowns."
+  },
+  {
+    "season": 2011,
+    "label": "Super Bowl XLVI",
+    "champ": "New York Giants",
+    "runner": "New England Patriots",
+    "score": "21-17",
+    "fmvp": "Eli Manning",
+    "mvp": "Aaron Rodgers",
+    "note": "Mario Manningham's sideline catch set up Ahmad Bradshaw's awkward go-ahead touchdown, as Eli Manning beat Tom Brady again."
+  },
+  {
+    "season": 2012,
+    "label": "Super Bowl XLVII",
+    "champ": "Baltimore Ravens",
+    "runner": "San Francisco 49ers",
+    "score": "34-31",
+    "fmvp": "Joe Flacco",
+    "mvp": "Adrian Peterson",
+    "note": "The 'Harbaugh Bowl' between brothers John and Jim was interrupted by a 34-minute power outage in the Superdome."
+  },
+  {
+    "season": 2013,
+    "label": "Super Bowl XLVIII",
+    "champ": "Seattle Seahawks",
+    "runner": "Denver Broncos",
+    "score": "43-8",
+    "fmvp": "Malcolm Smith",
+    "mvp": "Peyton Manning",
+    "note": "The Legion of Boom obliterated the NFL's highest-scoring offense ever, starting with a safety 12 seconds into the game."
+  },
+  {
+    "season": 2014,
+    "label": "Super Bowl XLIX",
+    "champ": "New England Patriots",
+    "runner": "Seattle Seahawks",
+    "score": "28-24",
+    "fmvp": "Tom Brady",
+    "mvp": "Aaron Rodgers",
+    "note": "Malcolm Butler's goal-line interception on a pass from the one-yard line is the most debated play call in Super Bowl history."
+  },
+  {
+    "season": 2015,
+    "label": "Super Bowl L",
+    "champ": "Denver Broncos",
+    "runner": "Carolina Panthers",
+    "score": "24-10",
+    "fmvp": "Von Miller",
+    "mvp": "Cam Newton",
+    "note": "Officially branded 'Super Bowl 50' rather than using the Roman numeral L; Von Miller's two strip-sacks sent Peyton Manning out a champion."
+  },
+  {
+    "season": 2016,
+    "label": "Super Bowl LI",
+    "champ": "New England Patriots",
+    "runner": "Atlanta Falcons",
+    "score": "34-28",
+    "fmvp": "Tom Brady",
+    "mvp": "Matt Ryan",
+    "note": "New England erased a 28-3 deficit in the only Super Bowl to reach overtime at that point, the largest comeback in the game's history."
+  },
+  {
+    "season": 2017,
+    "label": "Super Bowl LII",
+    "champ": "Philadelphia Eagles",
+    "runner": "New England Patriots",
+    "score": "41-33",
+    "fmvp": "Nick Foles",
+    "mvp": "Tom Brady",
+    "note": "Backup quarterback Nick Foles caught a touchdown pass on the 'Philly Special' and won the Eagles' first Super Bowl."
+  },
+  {
+    "season": 2018,
+    "label": "Super Bowl LIII",
+    "champ": "New England Patriots",
+    "runner": "Los Angeles Rams",
+    "score": "13-3",
+    "fmvp": "Julian Edelman",
+    "mvp": "Patrick Mahomes",
+    "note": "The lowest-scoring Super Bowl ever, with the only touchdown coming in the fourth quarter."
+  },
+  {
+    "season": 2019,
+    "label": "Super Bowl LIV",
+    "champ": "Kansas City Chiefs",
+    "runner": "San Francisco 49ers",
+    "score": "31-20",
+    "fmvp": "Patrick Mahomes",
+    "mvp": "Lamar Jackson",
+    "note": "Kansas City scored 21 unanswered fourth-quarter points to win its first title in 50 years, with Andy Reid winning his first."
+  },
+  {
+    "season": 2020,
+    "label": "Super Bowl LV",
+    "champ": "Tampa Bay Buccaneers",
+    "runner": "Kansas City Chiefs",
+    "score": "31-9",
+    "fmvp": "Tom Brady",
+    "mvp": "Aaron Rodgers",
+    "note": "Tom Brady won a seventh ring in his first year with Tampa Bay, the first team to play a Super Bowl in its home stadium."
+  },
+  {
+    "season": 2021,
+    "label": "Super Bowl LVI",
+    "champ": "Los Angeles Rams",
+    "runner": "Cincinnati Bengals",
+    "score": "23-20",
+    "fmvp": "Cooper Kupp",
+    "mvp": "Aaron Rodgers",
+    "note": "Cooper Kupp capped a receiving triple crown season with the winning touchdown, again in the Rams' home stadium."
+  },
+  {
+    "season": 2022,
+    "label": "Super Bowl LVII",
+    "champ": "Kansas City Chiefs",
+    "runner": "Philadelphia Eagles",
+    "score": "38-35",
+    "fmvp": "Patrick Mahomes",
+    "mvp": "Patrick Mahomes",
+    "note": "The first Super Bowl with opposing brothers, Travis and Jason Kelce, played by a Mahomes hobbled by a high ankle sprain."
+  },
+  {
+    "season": 2023,
+    "label": "Super Bowl LVIII",
+    "champ": "Kansas City Chiefs",
+    "runner": "San Francisco 49ers",
+    "score": "25-22",
+    "fmvp": "Patrick Mahomes",
+    "mvp": "Lamar Jackson",
+    "note": "Kansas City repeated as champion in the second Super Bowl to go to overtime, winning on a Mecole Hardman catch."
+  },
+  {
+    "season": 2024,
+    "label": "Super Bowl LIX",
+    "champ": "Philadelphia Eagles",
+    "runner": "Kansas City Chiefs",
+    "score": "40-22",
+    "fmvp": "Jalen Hurts",
+    "mvp": "Josh Allen",
+    "note": "Philadelphia denied Kansas City a three-peat, sacking Patrick Mahomes six times without blitzing much at all."
+  },
+  {
+    "season": 2025,
+    "label": "Super Bowl LX",
+    "champ": "Seattle Seahawks",
+    "runner": "New England Patriots",
+    "score": "29-13",
+    "fmvp": "Kenneth Walker III",
+    "mvp": "Matthew Stafford",
+    "note": "Seattle won its second Lombardi Trophy behind running back Kenneth Walker III, who became the first Seahawk other than Malcolm Smith to be named Super Bowl MVP."
+  }
+];
+window.MLB=[
+  {
+    "season": 1903,
+    "label": "1903 World Series",
+    "champ": "Boston Americans",
+    "runner": "Pittsburgh Pirates",
+    "score": "5-3",
+    "note": "The very first World Series, a best-of-nine in which Boston rallied from a 3-1 deficit behind Cy Young and Bill Dinneen's three complete-game wins."
+  },
+  {
+    "season": 1905,
+    "label": "1905 World Series",
+    "champ": "New York Giants",
+    "runner": "Philadelphia Athletics",
+    "score": "4-1",
+    "note": "Christy Mathewson threw three complete-game shutouts in six days, and every game of the Series was a shutout."
+  },
+  {
+    "season": 1906,
+    "label": "1906 World Series",
+    "champ": "Chicago White Sox",
+    "runner": "Chicago Cubs",
+    "score": "4-2",
+    "note": "The 'Hitless Wonders' White Sox, last in the league in batting, upset a Cubs team that had won a record 116 regular-season games."
+  },
+  {
+    "season": 1907,
+    "label": "1907 World Series",
+    "champ": "Chicago Cubs",
+    "runner": "Detroit Tigers",
+    "score": "4-0-1",
+    "note": "Game 1 ended in a 3-3 tie called for darkness, then Chicago swept the next four for the Cubs' first title."
+  },
+  {
+    "season": 1908,
+    "label": "1908 World Series",
+    "champ": "Chicago Cubs",
+    "runner": "Detroit Tigers",
+    "score": "4-1",
+    "note": "The Cubs repeated over Detroit for what remained their last championship for 108 years."
+  },
+  {
+    "season": 1909,
+    "label": "1909 World Series",
+    "champ": "Pittsburgh Pirates",
+    "runner": "Detroit Tigers",
+    "score": "4-3",
+    "note": "Honus Wagner outdueled rookie Ty Cobb, and 27-game winner Babe Adams won three games for Pittsburgh."
+  },
+  {
+    "season": 1910,
+    "label": "1910 World Series",
+    "champ": "Philadelphia Athletics",
+    "runner": "Chicago Cubs",
+    "score": "4-1",
+    "note": "Connie Mack's Athletics won their first title as Eddie Collins and Frank Baker battered Chicago pitching."
+  },
+  {
+    "season": 1911,
+    "label": "1911 World Series",
+    "champ": "Philadelphia Athletics",
+    "runner": "New York Giants",
+    "score": "4-2",
+    "note": "Frank Baker homered off both Rube Marquard and Christy Mathewson, earning the nickname 'Home Run' Baker."
+  },
+  {
+    "season": 1912,
+    "label": "1912 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "New York Giants",
+    "score": "4-3-1",
+    "note": "Game 2 was called a tie after 11 innings, and the Giants lost Game 8 in extra innings after Fred Snodgrass's famous muff in center field."
+  },
+  {
+    "season": 1913,
+    "label": "1913 World Series",
+    "champ": "Philadelphia Athletics",
+    "runner": "New York Giants",
+    "score": "4-1",
+    "note": "Philadelphia beat the Giants for the third time in four years as Mathewson's only win came in extra innings."
+  },
+  {
+    "season": 1914,
+    "label": "1914 World Series",
+    "champ": "Boston Braves",
+    "runner": "Philadelphia Athletics",
+    "score": "4-0",
+    "note": "The 'Miracle Braves' went from last place on the Fourth of July to the first sweep in World Series history."
+  },
+  {
+    "season": 1915,
+    "label": "1915 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "Philadelphia Phillies",
+    "score": "4-1",
+    "note": "Boston won its second title with a young Babe Ruth limited to a single pinch-hit at-bat."
+  },
+  {
+    "season": 1916,
+    "label": "1916 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "Brooklyn Robins",
+    "score": "4-1",
+    "note": "Babe Ruth pitched 13 shutout innings in Game 2, still the longest complete-game win in World Series history."
+  },
+  {
+    "season": 1917,
+    "label": "1917 World Series",
+    "champ": "Chicago White Sox",
+    "runner": "New York Giants",
+    "score": "4-2",
+    "note": "The White Sox won their second title behind Red Faber's three victories; they would not win again until 2005."
+  },
+  {
+    "season": 1918,
+    "label": "1918 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "Chicago Cubs",
+    "score": "4-2",
+    "note": "Babe Ruth extended his scoreless-innings streak to 29 2/3 in Boston's last title for 86 years."
+  },
+  {
+    "season": 1919,
+    "label": "1919 World Series",
+    "champ": "Cincinnati Reds",
+    "runner": "Chicago White Sox",
+    "score": "5-3",
+    "note": "The Black Sox scandal: eight Chicago players were later banned for life for conspiring to lose to Cincinnati."
+  },
+  {
+    "season": 1920,
+    "label": "1920 World Series",
+    "champ": "Cleveland Indians",
+    "runner": "Brooklyn Robins",
+    "score": "5-2",
+    "note": "Bill Wambsganss turned the only unassisted triple play in World Series history, and Elmer Smith hit the first Series grand slam."
+  },
+  {
+    "season": 1921,
+    "label": "1921 World Series",
+    "champ": "New York Giants",
+    "runner": "New York Yankees",
+    "score": "5-3",
+    "note": "The first all-New York Series, played entirely at the Polo Grounds, with the Giants winning the last best-of-nine final."
+  },
+  {
+    "season": 1922,
+    "label": "1922 World Series",
+    "champ": "New York Giants",
+    "runner": "New York Yankees",
+    "score": "4-0-1",
+    "note": "The Giants beat Babe Ruth's Yankees without a loss, though Game 2 was controversially called a tie for darkness."
+  },
+  {
+    "season": 1923,
+    "label": "1923 World Series",
+    "champ": "New York Yankees",
+    "runner": "New York Giants",
+    "score": "4-2",
+    "note": "The Yankees won their first championship in the debut season of Yankee Stadium, with Casey Stengel homering twice for the Giants."
+  },
+  {
+    "season": 1924,
+    "label": "1924 World Series",
+    "champ": "Washington Senators",
+    "runner": "New York Giants",
+    "score": "4-3",
+    "note": "Walter Johnson, in his 18th season, won Game 7 in relief in 12 innings for Washington's only title."
+  },
+  {
+    "season": 1925,
+    "label": "1925 World Series",
+    "champ": "Pittsburgh Pirates",
+    "runner": "Washington Senators",
+    "score": "4-3",
+    "note": "Pittsburgh became the first team to come back from a 3-1 deficit, beating Walter Johnson in a Game 7 downpour."
+  },
+  {
+    "season": 1926,
+    "label": "1926 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "note": "Grover Cleveland Alexander struck out Tony Lazzeri with the bases loaded in Game 7, which ended with Babe Ruth caught stealing."
+  },
+  {
+    "season": 1927,
+    "label": "1927 World Series",
+    "champ": "New York Yankees",
+    "runner": "Pittsburgh Pirates",
+    "score": "4-0",
+    "note": "The 'Murderers' Row' Yankees, considered among the greatest teams ever, swept Pittsburgh after a 110-win season."
+  },
+  {
+    "season": 1928,
+    "label": "1928 World Series",
+    "champ": "New York Yankees",
+    "runner": "St. Louis Cardinals",
+    "score": "4-0",
+    "note": "Babe Ruth hit .625 and Lou Gehrig slugged four homers in a four-game sweep of the Cardinals."
+  },
+  {
+    "season": 1929,
+    "label": "1929 World Series",
+    "champ": "Philadelphia Athletics",
+    "runner": "Chicago Cubs",
+    "score": "4-1",
+    "note": "Philadelphia scored 10 runs in the seventh inning of Game 4 to erase an 8-0 deficit, the biggest comeback in Series history."
+  },
+  {
+    "season": 1930,
+    "label": "1930 World Series",
+    "champ": "Philadelphia Athletics",
+    "runner": "St. Louis Cardinals",
+    "score": "4-2",
+    "note": "The Athletics repeated as champions behind Lefty Grove and George Earnshaw, who won two games apiece."
+  },
+  {
+    "season": 1931,
+    "label": "1931 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Philadelphia Athletics",
+    "score": "4-3",
+    "mvpAL": "Lefty Grove",
+    "mvpNL": "Frankie Frisch",
+    "note": "Pepper Martin hit .500 with five stolen bases, becoming a national sensation as the Cardinals dethroned the A's."
+  },
+  {
+    "season": 1932,
+    "label": "1932 World Series",
+    "champ": "New York Yankees",
+    "runner": "Chicago Cubs",
+    "score": "4-0",
+    "mvpAL": "Jimmie Foxx",
+    "mvpNL": "Chuck Klein",
+    "note": "This was the Series of Babe Ruth's 'called shot' home run off Charlie Root in Game 3 at Wrigley Field."
+  },
+  {
+    "season": 1933,
+    "label": "1933 World Series",
+    "champ": "New York Giants",
+    "runner": "Washington Senators",
+    "score": "4-1",
+    "mvpAL": "Jimmie Foxx",
+    "mvpNL": "Carl Hubbell",
+    "note": "Player-manager Bill Terry's Giants won behind Carl Hubbell, and Mel Ott's 10th-inning homer ended Game 5."
+  },
+  {
+    "season": 1934,
+    "label": "1934 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Detroit Tigers",
+    "score": "4-3",
+    "mvpAL": "Mickey Cochrane",
+    "mvpNL": "Dizzy Dean",
+    "note": "The Gashouse Gang won as Dizzy and Paul Dean took two games each, and Game 7 saw Detroit fans pelt Joe Medwick with garbage."
+  },
+  {
+    "season": 1935,
+    "label": "1935 World Series",
+    "champ": "Detroit Tigers",
+    "runner": "Chicago Cubs",
+    "score": "4-2",
+    "mvpAL": "Hank Greenberg",
+    "mvpNL": "Gabby Hartnett",
+    "note": "Detroit won its first World Series ever, with Goose Goslin driving in the walk-off winner in Game 6."
+  },
+  {
+    "season": 1936,
+    "label": "1936 World Series",
+    "champ": "New York Yankees",
+    "runner": "New York Giants",
+    "score": "4-2",
+    "mvpAL": "Lou Gehrig",
+    "mvpNL": "Carl Hubbell",
+    "note": "The Yankees' first title of the Joe DiMaggio era, including an 18-4 rout in Game 2."
+  },
+  {
+    "season": 1937,
+    "label": "1937 World Series",
+    "champ": "New York Yankees",
+    "runner": "New York Giants",
+    "score": "4-1",
+    "mvpAL": "Charlie Gehringer",
+    "mvpNL": "Joe Medwick",
+    "note": "New York beat the Giants again as Lefty Gomez won two games and Carl Hubbell took the Giants' only victory."
+  },
+  {
+    "season": 1938,
+    "label": "1938 World Series",
+    "champ": "New York Yankees",
+    "runner": "Chicago Cubs",
+    "score": "4-0",
+    "mvpAL": "Jimmie Foxx",
+    "mvpNL": "Ernie Lombardi",
+    "note": "The Yankees became the first team to win three straight World Series, sweeping the Cubs."
+  },
+  {
+    "season": 1939,
+    "label": "1939 World Series",
+    "champ": "New York Yankees",
+    "runner": "Cincinnati Reds",
+    "score": "4-0",
+    "mvpAL": "Joe DiMaggio",
+    "mvpNL": "Bucky Walters",
+    "note": "A fourth straight title, sealed when Ernie Lombardi lay stunned at the plate during 'Lombardi's Snooze' in Game 4."
+  },
+  {
+    "season": 1940,
+    "label": "1940 World Series",
+    "champ": "Cincinnati Reds",
+    "runner": "Detroit Tigers",
+    "score": "4-3",
+    "mvpAL": "Hank Greenberg",
+    "mvpNL": "Frank McCormick",
+    "note": "Bucky Walters and Paul Derringer carried Cincinnati to its first untainted championship after the 1919 scandal."
+  },
+  {
+    "season": 1941,
+    "label": "1941 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-1",
+    "mvpAL": "Joe DiMaggio",
+    "mvpNL": "Dolph Camilli",
+    "note": "Catcher Mickey Owen dropped a game-ending third strike in Game 4, and the Yankees rallied to win the game and the Series."
+  },
+  {
+    "season": 1942,
+    "label": "1942 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "New York Yankees",
+    "score": "4-1",
+    "mvpAL": "Joe Gordon",
+    "mvpNL": "Mort Cooper",
+    "note": "The rookie-laden Cardinals of Stan Musial won four straight after dropping Game 1, ending the Yankees' streak."
+  },
+  {
+    "season": 1943,
+    "label": "1943 World Series",
+    "champ": "New York Yankees",
+    "runner": "St. Louis Cardinals",
+    "score": "4-1",
+    "mvpAL": "Spud Chandler",
+    "mvpNL": "Stan Musial",
+    "note": "Spud Chandler pitched two complete games as the Yankees avenged the previous year's loss."
+  },
+  {
+    "season": 1944,
+    "label": "1944 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "St. Louis Browns",
+    "score": "4-2",
+    "mvpAL": "Hal Newhouser",
+    "mvpNL": "Marty Marion",
+    "note": "The only all-St. Louis World Series, with the Cardinals and Browns sharing Sportsman's Park."
+  },
+  {
+    "season": 1945,
+    "label": "1945 World Series",
+    "champ": "Detroit Tigers",
+    "runner": "Chicago Cubs",
+    "score": "4-3",
+    "mvpAL": "Hal Newhouser",
+    "mvpNL": "Phil Cavarretta",
+    "note": "A wartime Series famously called 'neither team can win'; the Cubs' loss began the legend of the Billy Goat curse."
+  },
+  {
+    "season": 1946,
+    "label": "1946 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Boston Red Sox",
+    "score": "4-3",
+    "mvpAL": "Ted Williams",
+    "mvpNL": "Stan Musial",
+    "note": "Enos Slaughter's 'Mad Dash' from first scored the winning run in Game 7 against Boston."
+  },
+  {
+    "season": 1947,
+    "label": "1947 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-3",
+    "mvpAL": "Joe DiMaggio",
+    "mvpNL": "Bob Elliott",
+    "note": "Jackie Robinson's rookie season ended here, and Cookie Lavagetto broke up Bill Bevens's no-hitter with two outs in the ninth of Game 4."
+  },
+  {
+    "season": 1948,
+    "label": "1948 World Series",
+    "champ": "Cleveland Indians",
+    "runner": "Boston Braves",
+    "score": "4-2",
+    "mvpAL": "Lou Boudreau",
+    "mvpNL": "Stan Musial",
+    "note": "Cleveland's last championship, with player-manager Lou Boudreau and rookie Gene Bearden starring."
+  },
+  {
+    "season": 1949,
+    "label": "1949 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-1",
+    "mvpAL": "Ted Williams",
+    "mvpNL": "Jackie Robinson",
+    "note": "The first of a record five consecutive Yankees championships under Casey Stengel."
+  },
+  {
+    "season": 1950,
+    "label": "1950 World Series",
+    "champ": "New York Yankees",
+    "runner": "Philadelphia Phillies",
+    "score": "4-0",
+    "mvpAL": "Phil Rizzuto",
+    "mvpNL": "Jim Konstanty",
+    "note": "The 'Whiz Kids' Phillies were swept, with three of the four games decided by a single run."
+  },
+  {
+    "season": 1951,
+    "label": "1951 World Series",
+    "champ": "New York Yankees",
+    "runner": "New York Giants",
+    "score": "4-2",
+    "mvpAL": "Yogi Berra",
+    "mvpNL": "Roy Campanella",
+    "note": "The Giants arrived on the heels of Bobby Thomson's 'Shot Heard 'Round the World' but lost to the Yankees in six."
+  },
+  {
+    "season": 1952,
+    "label": "1952 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-3",
+    "mvpAL": "Bobby Shantz",
+    "mvpNL": "Hank Sauer",
+    "note": "Billy Martin's lunging catch of a windblown pop-up with the bases loaded saved Game 7 for New York."
+  },
+  {
+    "season": 1953,
+    "label": "1953 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-2",
+    "mvpAL": "Al Rosen",
+    "mvpNL": "Roy Campanella",
+    "note": "Billy Martin's 12th hit, a Game 6 walk-off single, gave the Yankees a record fifth straight title."
+  },
+  {
+    "season": 1954,
+    "label": "1954 World Series",
+    "champ": "New York Giants",
+    "runner": "Cleveland Indians",
+    "score": "4-0",
+    "mvpAL": "Yogi Berra",
+    "mvpNL": "Willie Mays",
+    "note": "Willie Mays's over-the-shoulder catch in Game 1 keyed a sweep of a Cleveland team that had won 111 games."
+  },
+  {
+    "season": 1955,
+    "label": "1955 World Series",
+    "champ": "Brooklyn Dodgers",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "fmvp": "Johnny Podres",
+    "mvpAL": "Yogi Berra",
+    "mvpNL": "Roy Campanella",
+    "note": "'Next Year' finally came for Brooklyn as Johnny Podres shut out the Yankees in Game 7 and Sandy Amoros made a famous catch."
+  },
+  {
+    "season": 1956,
+    "label": "1956 World Series",
+    "champ": "New York Yankees",
+    "runner": "Brooklyn Dodgers",
+    "score": "4-3",
+    "fmvp": "Don Larsen",
+    "mvpAL": "Mickey Mantle",
+    "mvpNL": "Don Newcombe",
+    "note": "Don Larsen threw the only perfect game in World Series history in Game 5."
+  },
+  {
+    "season": 1957,
+    "label": "1957 World Series",
+    "champ": "Milwaukee Braves",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "fmvp": "Lew Burdette",
+    "mvpAL": "Mickey Mantle",
+    "mvpNL": "Hank Aaron",
+    "note": "Milwaukee won its only title in Wisconsin, with Lew Burdette throwing three complete games including two shutouts."
+  },
+  {
+    "season": 1958,
+    "label": "1958 World Series",
+    "champ": "New York Yankees",
+    "runner": "Milwaukee Braves",
+    "score": "4-3",
+    "fmvp": "Bob Turley",
+    "mvpAL": "Jackie Jensen",
+    "mvpNL": "Ernie Banks",
+    "note": "The Yankees became the first team in 33 years to overcome a 3-1 Series deficit."
+  },
+  {
+    "season": 1959,
+    "label": "1959 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "Chicago White Sox",
+    "score": "4-2",
+    "fmvp": "Larry Sherry",
+    "mvpAL": "Nellie Fox",
+    "mvpNL": "Ernie Banks",
+    "note": "The Dodgers' first title in Los Angeles, played before crowds of over 92,000 at the Coliseum."
+  },
+  {
+    "season": 1960,
+    "label": "1960 World Series",
+    "champ": "Pittsburgh Pirates",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "fmvp": "Bobby Richardson",
+    "mvpAL": "Roger Maris",
+    "mvpNL": "Dick Groat",
+    "note": "Bill Mazeroski hit the only Game 7 walk-off home run to win a World Series, though the Yankees outscored Pittsburgh 55-27."
+  },
+  {
+    "season": 1961,
+    "label": "1961 World Series",
+    "champ": "New York Yankees",
+    "runner": "Cincinnati Reds",
+    "score": "4-1",
+    "fmvp": "Whitey Ford",
+    "mvpAL": "Roger Maris",
+    "mvpNL": "Frank Robinson",
+    "note": "Whitey Ford extended his record scoreless-innings streak to 32 as the Yankees of Maris and Mantle rolled."
+  },
+  {
+    "season": 1962,
+    "label": "1962 World Series",
+    "champ": "New York Yankees",
+    "runner": "San Francisco Giants",
+    "score": "4-3",
+    "fmvp": "Ralph Terry",
+    "mvpAL": "Mickey Mantle",
+    "mvpNL": "Maury Wills",
+    "note": "Bobby Richardson caught Willie McCovey's screaming line drive with the tying and winning runs on base to end Game 7."
+  },
+  {
+    "season": 1963,
+    "label": "1963 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "New York Yankees",
+    "score": "4-0",
+    "fmvp": "Sandy Koufax",
+    "mvpAL": "Elston Howard",
+    "mvpNL": "Sandy Koufax",
+    "note": "Sandy Koufax struck out a then-record 15 in Game 1 and won twice as Los Angeles swept the Yankees."
+  },
+  {
+    "season": 1964,
+    "label": "1964 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "fmvp": "Bob Gibson",
+    "mvpAL": "Brooks Robinson",
+    "mvpNL": "Ken Boyer",
+    "note": "Bob Gibson won two games and the Cardinals took Game 7; Yogi Berra was fired the next day."
+  },
+  {
+    "season": 1965,
+    "label": "1965 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "Minnesota Twins",
+    "score": "4-3",
+    "fmvp": "Sandy Koufax",
+    "mvpAL": "Zoilo Versalles",
+    "mvpNL": "Willie Mays",
+    "note": "Sandy Koufax sat out Game 1 for Yom Kippur, then threw shutouts in Games 5 and 7 on two days' rest."
+  },
+  {
+    "season": 1966,
+    "label": "1966 World Series",
+    "champ": "Baltimore Orioles",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-0",
+    "fmvp": "Frank Robinson",
+    "mvpAL": "Frank Robinson",
+    "mvpNL": "Roberto Clemente",
+    "note": "Baltimore pitchers threw 33 consecutive scoreless innings, holding the Dodgers to two runs in the entire sweep."
+  },
+  {
+    "season": 1967,
+    "label": "1967 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Boston Red Sox",
+    "score": "4-3",
+    "fmvp": "Bob Gibson",
+    "mvpAL": "Carl Yastrzemski",
+    "mvpNL": "Orlando Cepeda",
+    "note": "Bob Gibson won three complete games while Carl Yastrzemski hit .400 for Boston's 'Impossible Dream' team."
+  },
+  {
+    "season": 1968,
+    "label": "1968 World Series",
+    "champ": "Detroit Tigers",
+    "runner": "St. Louis Cardinals",
+    "score": "4-3",
+    "fmvp": "Mickey Lolich",
+    "mvpAL": "Denny McLain",
+    "mvpNL": "Bob Gibson",
+    "note": "Mickey Lolich beat Bob Gibson in Game 7 after Gibson had struck out a record 17 in Game 1."
+  },
+  {
+    "season": 1969,
+    "label": "1969 World Series",
+    "champ": "New York Mets",
+    "runner": "Baltimore Orioles",
+    "score": "4-1",
+    "fmvp": "Donn Clendenon",
+    "mvpAL": "Harmon Killebrew",
+    "mvpNL": "Willie McCovey",
+    "note": "The 'Miracle Mets' went from ninth place the year before to a stunning upset of the heavily favored Orioles."
+  },
+  {
+    "season": 1970,
+    "label": "1970 World Series",
+    "champ": "Baltimore Orioles",
+    "runner": "Cincinnati Reds",
+    "score": "4-1",
+    "fmvp": "Brooks Robinson",
+    "mvpAL": "Boog Powell",
+    "mvpNL": "Johnny Bench",
+    "note": "Brooks Robinson's spectacular defense at third base dominated the Series and won him the MVP."
+  },
+  {
+    "season": 1971,
+    "label": "1971 World Series",
+    "champ": "Pittsburgh Pirates",
+    "runner": "Baltimore Orioles",
+    "score": "4-3",
+    "fmvp": "Roberto Clemente",
+    "mvpAL": "Vida Blue",
+    "mvpNL": "Joe Torre",
+    "note": "Roberto Clemente hit .414 in his final World Series, and Game 4 was the first ever played at night."
+  },
+  {
+    "season": 1972,
+    "label": "1972 World Series",
+    "champ": "Oakland Athletics",
+    "runner": "Cincinnati Reds",
+    "score": "4-3",
+    "fmvp": "Gene Tenace",
+    "mvpAL": "Dick Allen",
+    "mvpNL": "Johnny Bench",
+    "note": "Oakland's first title in a Series where six of seven games were decided by one run, with Gene Tenace homering in his first two at-bats."
+  },
+  {
+    "season": 1973,
+    "label": "1973 World Series",
+    "champ": "Oakland Athletics",
+    "runner": "New York Mets",
+    "score": "4-3",
+    "fmvp": "Reggie Jackson",
+    "mvpAL": "Reggie Jackson",
+    "mvpNL": "Pete Rose",
+    "note": "The A's repeated over the Mets, and Charlie Finley's attempt to fire Mike Andrews became a scandal."
+  },
+  {
+    "season": 1974,
+    "label": "1974 World Series",
+    "champ": "Oakland Athletics",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-1",
+    "fmvp": "Rollie Fingers",
+    "mvpAL": "Jeff Burroughs",
+    "mvpNL": "Steve Garvey",
+    "note": "The first all-California World Series, and Oakland's third straight championship."
+  },
+  {
+    "season": 1975,
+    "label": "1975 World Series",
+    "champ": "Cincinnati Reds",
+    "runner": "Boston Red Sox",
+    "score": "4-3",
+    "fmvp": "Pete Rose",
+    "mvpAL": "Fred Lynn",
+    "mvpNL": "Joe Morgan",
+    "note": "Carlton Fisk's body-English home run off the foul pole ended Game 6, widely called the greatest game ever played."
+  },
+  {
+    "season": 1976,
+    "label": "1976 World Series",
+    "champ": "Cincinnati Reds",
+    "runner": "New York Yankees",
+    "score": "4-0",
+    "fmvp": "Johnny Bench",
+    "mvpAL": "Thurman Munson",
+    "mvpNL": "Joe Morgan",
+    "note": "The Big Red Machine swept the Yankees to become the first NL team to repeat since 1922."
+  },
+  {
+    "season": 1977,
+    "label": "1977 World Series",
+    "champ": "New York Yankees",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-2",
+    "fmvp": "Reggie Jackson",
+    "mvpAL": "Rod Carew",
+    "mvpNL": "George Foster",
+    "note": "Reggie Jackson hit three home runs on three consecutive pitches in Game 6, earning the name 'Mr. October'."
+  },
+  {
+    "season": 1978,
+    "label": "1978 World Series",
+    "champ": "New York Yankees",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-2",
+    "fmvp": "Bucky Dent",
+    "mvpAL": "Jim Rice",
+    "mvpNL": "Dave Parker",
+    "note": "New York became the first team to win a Series after losing the first two games, with Bucky Dent hitting .417."
+  },
+  {
+    "season": 1979,
+    "label": "1979 World Series",
+    "champ": "Pittsburgh Pirates",
+    "runner": "Baltimore Orioles",
+    "score": "4-3",
+    "fmvp": "Willie Stargell",
+    "mvpAL": "Don Baylor",
+    "mvpNL": "Keith Hernandez and Willie Stargell",
+    "note": "Pittsburgh's 'We Are Family' Pirates came back from 3-1 down behind Willie Stargell's three homers."
+  },
+  {
+    "season": 1980,
+    "label": "1980 World Series",
+    "champ": "Philadelphia Phillies",
+    "runner": "Kansas City Royals",
+    "score": "4-2",
+    "fmvp": "Mike Schmidt",
+    "mvpAL": "George Brett",
+    "mvpNL": "Mike Schmidt",
+    "note": "The Phillies won the first championship in their 97-year history, with Tug McGraw striking out Willie Wilson to end it."
+  },
+  {
+    "season": 1981,
+    "label": "1981 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "New York Yankees",
+    "score": "4-2",
+    "fmvp": "Ron Cey, Pedro Guerrero and Steve Yeager",
+    "mvpAL": "Rollie Fingers",
+    "mvpNL": "Mike Schmidt",
+    "note": "The Dodgers lost the first two games and then won four straight in a season split by a players' strike."
+  },
+  {
+    "season": 1982,
+    "label": "1982 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Milwaukee Brewers",
+    "score": "4-3",
+    "fmvp": "Darrell Porter",
+    "mvpAL": "Robin Yount",
+    "mvpNL": "Dale Murphy",
+    "note": "Darrell Porter won both NLCS and World Series MVP as St. Louis beat Milwaukee's 'Harvey's Wallbangers'."
+  },
+  {
+    "season": 1983,
+    "label": "1983 World Series",
+    "champ": "Baltimore Orioles",
+    "runner": "Philadelphia Phillies",
+    "score": "4-1",
+    "fmvp": "Rick Dempsey",
+    "mvpAL": "Cal Ripken Jr.",
+    "mvpNL": "Dale Murphy",
+    "note": "Baltimore's last title to date, with Rick Dempsey hitting .385 and homering off the wall repeatedly."
+  },
+  {
+    "season": 1984,
+    "label": "1984 World Series",
+    "champ": "Detroit Tigers",
+    "runner": "San Diego Padres",
+    "score": "4-1",
+    "fmvp": "Alan Trammell",
+    "mvpAL": "Willie Hernández",
+    "mvpNL": "Ryne Sandberg",
+    "note": "Kirk Gibson's two home runs in Game 5, including a three-run shot off Goose Gossage, clinched Detroit's title."
+  },
+  {
+    "season": 1985,
+    "label": "1985 World Series",
+    "champ": "Kansas City Royals",
+    "runner": "St. Louis Cardinals",
+    "score": "4-3",
+    "fmvp": "Bret Saberhagen",
+    "mvpAL": "Don Mattingly",
+    "mvpNL": "Willie McGee",
+    "note": "The I-70 Series turned on umpire Don Denkinger's blown call at first base in the ninth inning of Game 6."
+  },
+  {
+    "season": 1986,
+    "label": "1986 World Series",
+    "champ": "New York Mets",
+    "runner": "Boston Red Sox",
+    "score": "4-3",
+    "fmvp": "Ray Knight",
+    "mvpAL": "Roger Clemens",
+    "mvpNL": "Mike Schmidt",
+    "note": "Mookie Wilson's grounder rolled through Bill Buckner's legs in Game 6, and the Mets won Game 7 from two runs down."
+  },
+  {
+    "season": 1987,
+    "label": "1987 World Series",
+    "champ": "Minnesota Twins",
+    "runner": "St. Louis Cardinals",
+    "score": "4-3",
+    "fmvp": "Frank Viola",
+    "mvpAL": "George Bell",
+    "mvpNL": "Andre Dawson",
+    "note": "Minnesota won every home game in the Metrodome and lost every road game, the first Series to go that way."
+  },
+  {
+    "season": 1988,
+    "label": "1988 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "Oakland Athletics",
+    "score": "4-1",
+    "fmvp": "Orel Hershiser",
+    "mvpAL": "Jose Canseco",
+    "mvpNL": "Kirk Gibson",
+    "note": "An injured Kirk Gibson limped off the bench to hit a pinch-hit walk-off homer off Dennis Eckersley in Game 1."
+  },
+  {
+    "season": 1989,
+    "label": "1989 World Series",
+    "champ": "Oakland Athletics",
+    "runner": "San Francisco Giants",
+    "score": "4-0",
+    "fmvp": "Dave Stewart",
+    "mvpAL": "Robin Yount",
+    "mvpNL": "Kevin Mitchell",
+    "note": "The Loma Prieta earthquake struck before Game 3 and delayed the Bay Bridge Series for 10 days."
+  },
+  {
+    "season": 1990,
+    "label": "1990 World Series",
+    "champ": "Cincinnati Reds",
+    "runner": "Oakland Athletics",
+    "score": "4-0",
+    "fmvp": "José Rijo",
+    "mvpAL": "Rickey Henderson",
+    "mvpNL": "Barry Bonds",
+    "note": "Cincinnati's wire-to-wire season ended with a stunning sweep of the defending champion A's, with Jose Rijo winning twice."
+  },
+  {
+    "season": 1991,
+    "label": "1991 World Series",
+    "champ": "Minnesota Twins",
+    "runner": "Atlanta Braves",
+    "score": "4-3",
+    "fmvp": "Jack Morris",
+    "mvpAL": "Cal Ripken Jr.",
+    "mvpNL": "Terry Pendleton",
+    "note": "Jack Morris threw a 10-inning shutout in Game 7 of a Series in which five games were decided on the final pitch."
+  },
+  {
+    "season": 1992,
+    "label": "1992 World Series",
+    "champ": "Toronto Blue Jays",
+    "runner": "Atlanta Braves",
+    "score": "4-2",
+    "fmvp": "Pat Borders",
+    "mvpAL": "Dennis Eckersley",
+    "mvpNL": "Barry Bonds",
+    "note": "Toronto became the first team outside the United States to win the World Series."
+  },
+  {
+    "season": 1993,
+    "label": "1993 World Series",
+    "champ": "Toronto Blue Jays",
+    "runner": "Philadelphia Phillies",
+    "score": "4-2",
+    "fmvp": "Paul Molitor",
+    "mvpAL": "Frank Thomas",
+    "mvpNL": "Barry Bonds",
+    "note": "Joe Carter's three-run walk-off homer off Mitch Williams ended the Series, only the second to finish that way."
+  },
+  {
+    "season": 1995,
+    "label": "1995 World Series",
+    "champ": "Atlanta Braves",
+    "runner": "Cleveland Indians",
+    "score": "4-2",
+    "fmvp": "Tom Glavine",
+    "mvpAL": "Mo Vaughn",
+    "mvpNL": "Barry Larkin",
+    "note": "Atlanta won its only title in the Braves' run of division crowns, with Tom Glavine throwing eight one-hit innings in Game 6."
+  },
+  {
+    "season": 1996,
+    "label": "1996 World Series",
+    "champ": "New York Yankees",
+    "runner": "Atlanta Braves",
+    "score": "4-2",
+    "fmvp": "John Wetteland",
+    "mvpAL": "Juan González",
+    "mvpNL": "Ken Caminiti",
+    "note": "The Yankees lost the first two games at home, then won four straight to start a new dynasty under Joe Torre."
+  },
+  {
+    "season": 1997,
+    "label": "1997 World Series",
+    "champ": "Florida Marlins",
+    "runner": "Cleveland Indians",
+    "score": "4-3",
+    "fmvp": "Liván Hernández",
+    "mvpAL": "Ken Griffey Jr.",
+    "mvpNL": "Larry Walker",
+    "note": "The fifth-year Marlins became the fastest expansion team to a title, winning on Edgar Renteria's 11th-inning single in Game 7."
+  },
+  {
+    "season": 1998,
+    "label": "1998 World Series",
+    "champ": "New York Yankees",
+    "runner": "San Diego Padres",
+    "score": "4-0",
+    "fmvp": "Scott Brosius",
+    "mvpAL": "Juan González",
+    "mvpNL": "Sammy Sosa",
+    "note": "The 114-win Yankees swept San Diego to cap one of the best seasons in major league history."
+  },
+  {
+    "season": 1999,
+    "label": "1999 World Series",
+    "champ": "New York Yankees",
+    "runner": "Atlanta Braves",
+    "score": "4-0",
+    "fmvp": "Mariano Rivera",
+    "mvpAL": "Iván Rodríguez",
+    "mvpNL": "Chipper Jones",
+    "note": "New York's second straight sweep gave it a record 25th championship and a 12-game Series winning streak."
+  },
+  {
+    "season": 2000,
+    "label": "2000 World Series",
+    "champ": "New York Yankees",
+    "runner": "New York Mets",
+    "score": "4-1",
+    "fmvp": "Derek Jeter",
+    "mvpAL": "Jason Giambi",
+    "mvpNL": "Jeff Kent",
+    "note": "The first Subway Series since 1956, remembered for Roger Clemens throwing a broken bat toward Mike Piazza."
+  },
+  {
+    "season": 2001,
+    "label": "2001 World Series",
+    "champ": "Arizona Diamondbacks",
+    "runner": "New York Yankees",
+    "score": "4-3",
+    "fmvp": "Randy Johnson and Curt Schilling",
+    "mvpAL": "Ichiro Suzuki",
+    "mvpNL": "Barry Bonds",
+    "note": "Played in November after the September 11 attacks, it ended with Luis Gonzalez's bloop single off Mariano Rivera in Game 7."
+  },
+  {
+    "season": 2002,
+    "label": "2002 World Series",
+    "champ": "Anaheim Angels",
+    "runner": "San Francisco Giants",
+    "score": "4-3",
+    "fmvp": "Troy Glaus",
+    "mvpAL": "Miguel Tejada",
+    "mvpNL": "Barry Bonds",
+    "note": "The Angels trailed Game 6 by five runs in the seventh inning and came back to force and win Game 7."
+  },
+  {
+    "season": 2003,
+    "label": "2003 World Series",
+    "champ": "Florida Marlins",
+    "runner": "New York Yankees",
+    "score": "4-2",
+    "fmvp": "Josh Beckett",
+    "mvpAL": "Alex Rodriguez",
+    "mvpNL": "Barry Bonds",
+    "note": "Josh Beckett shut out the Yankees in Game 6 on three days' rest to clinch it at Yankee Stadium."
+  },
+  {
+    "season": 2004,
+    "label": "2004 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "St. Louis Cardinals",
+    "score": "4-0",
+    "fmvp": "Manny Ramirez",
+    "mvpAL": "Vladimir Guerrero",
+    "mvpNL": "Barry Bonds",
+    "note": "Boston ended an 86-year drought, sweeping the Cardinals after becoming the first team to win a postseason series down 3-0."
+  },
+  {
+    "season": 2005,
+    "label": "2005 World Series",
+    "champ": "Chicago White Sox",
+    "runner": "Houston Astros",
+    "score": "4-0",
+    "fmvp": "Jermaine Dye",
+    "mvpAL": "Alex Rodriguez",
+    "mvpNL": "Albert Pujols",
+    "note": "The White Sox won their first title in 88 years, sweeping a Series in which every game was decided by two runs or fewer."
+  },
+  {
+    "season": 2006,
+    "label": "2006 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Detroit Tigers",
+    "score": "4-1",
+    "fmvp": "David Eckstein",
+    "mvpAL": "Justin Morneau",
+    "mvpNL": "Ryan Howard",
+    "note": "St. Louis won with just 83 regular-season wins, the fewest ever by a World Series champion at the time."
+  },
+  {
+    "season": 2007,
+    "label": "2007 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "Colorado Rockies",
+    "score": "4-0",
+    "fmvp": "Mike Lowell",
+    "mvpAL": "Alex Rodriguez",
+    "mvpNL": "Jimmy Rollins",
+    "note": "Boston swept Colorado, which had won 21 of 22 games to reach the Series and then sat idle for eight days."
+  },
+  {
+    "season": 2008,
+    "label": "2008 World Series",
+    "champ": "Philadelphia Phillies",
+    "runner": "Tampa Bay Rays",
+    "score": "4-1",
+    "fmvp": "Cole Hamels",
+    "mvpAL": "Dustin Pedroia",
+    "mvpNL": "Albert Pujols",
+    "note": "Game 5 was suspended by rain and finished two days later, the first suspended game in World Series history."
+  },
+  {
+    "season": 2009,
+    "label": "2009 World Series",
+    "champ": "New York Yankees",
+    "runner": "Philadelphia Phillies",
+    "score": "4-2",
+    "fmvp": "Hideki Matsui",
+    "mvpAL": "Joe Mauer",
+    "mvpNL": "Albert Pujols",
+    "note": "The Yankees' 27th title, the first in the new Yankee Stadium, with Hideki Matsui driving in six runs in Game 6."
+  },
+  {
+    "season": 2010,
+    "label": "2010 World Series",
+    "champ": "San Francisco Giants",
+    "runner": "Texas Rangers",
+    "score": "4-1",
+    "fmvp": "Edgar Rentería",
+    "mvpAL": "Josh Hamilton",
+    "mvpNL": "Joey Votto",
+    "note": "San Francisco's first championship since moving west in 1958, behind Tim Lincecum and rookie catcher Buster Posey."
+  },
+  {
+    "season": 2011,
+    "label": "2011 World Series",
+    "champ": "St. Louis Cardinals",
+    "runner": "Texas Rangers",
+    "score": "4-3",
+    "fmvp": "David Freese",
+    "mvpAL": "Justin Verlander",
+    "mvpNL": "Ryan Braun",
+    "note": "David Freese tied Game 6 with two outs in the ninth and won it with a walk-off homer in the 11th."
+  },
+  {
+    "season": 2012,
+    "label": "2012 World Series",
+    "champ": "San Francisco Giants",
+    "runner": "Detroit Tigers",
+    "score": "4-0",
+    "fmvp": "Pablo Sandoval",
+    "mvpAL": "Miguel Cabrera",
+    "mvpNL": "Buster Posey",
+    "note": "Pablo Sandoval homered three times in Game 1, joining Ruth, Jackson and Pujols in that club."
+  },
+  {
+    "season": 2013,
+    "label": "2013 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "St. Louis Cardinals",
+    "score": "4-2",
+    "fmvp": "David Ortiz",
+    "mvpAL": "Miguel Cabrera",
+    "mvpNL": "Andrew McCutchen",
+    "note": "Boston won at Fenway Park for the first time since 1918, and Game 3 ended on an obstruction call."
+  },
+  {
+    "season": 2014,
+    "label": "2014 World Series",
+    "champ": "San Francisco Giants",
+    "runner": "Kansas City Royals",
+    "score": "4-3",
+    "fmvp": "Madison Bumgarner",
+    "mvpAL": "Mike Trout",
+    "mvpNL": "Clayton Kershaw",
+    "note": "Madison Bumgarner threw five shutout innings on two days' rest to save Game 7 after two earlier wins."
+  },
+  {
+    "season": 2015,
+    "label": "2015 World Series",
+    "champ": "Kansas City Royals",
+    "runner": "New York Mets",
+    "score": "4-1",
+    "fmvp": "Salvador Pérez",
+    "mvpAL": "Josh Donaldson",
+    "mvpNL": "Bryce Harper",
+    "note": "Kansas City's first title in 30 years, won with repeated late comebacks including a ninth-inning rally in the clinching Game 5."
+  },
+  {
+    "season": 2016,
+    "label": "2016 World Series",
+    "champ": "Chicago Cubs",
+    "runner": "Cleveland Indians",
+    "score": "4-3",
+    "fmvp": "Ben Zobrist",
+    "mvpAL": "Mike Trout",
+    "mvpNL": "Kris Bryant",
+    "note": "The Cubs ended a 108-year drought, winning Game 7 in 10 innings after a rain delay and after trailing the Series 3-1."
+  },
+  {
+    "season": 2017,
+    "label": "2017 World Series",
+    "champ": "Houston Astros",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-3",
+    "fmvp": "George Springer",
+    "mvpAL": "Jose Altuve",
+    "mvpNL": "Giancarlo Stanton",
+    "note": "Houston's first championship, later tarnished by revelations of the team's sign-stealing scheme that season."
+  },
+  {
+    "season": 2018,
+    "label": "2018 World Series",
+    "champ": "Boston Red Sox",
+    "runner": "Los Angeles Dodgers",
+    "score": "4-1",
+    "fmvp": "Steve Pearce",
+    "mvpAL": "Mookie Betts",
+    "mvpNL": "Christian Yelich",
+    "note": "Game 3 lasted 18 innings and 7 hours 20 minutes, the longest game in World Series history."
+  },
+  {
+    "season": 2019,
+    "label": "2019 World Series",
+    "champ": "Washington Nationals",
+    "runner": "Houston Astros",
+    "score": "4-3",
+    "fmvp": "Stephen Strasburg",
+    "mvpAL": "Mike Trout",
+    "mvpNL": "Cody Bellinger",
+    "note": "The road team won all seven games, the only time that has happened in any major North American sports final."
+  },
+  {
+    "season": 2020,
+    "label": "2020 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "Tampa Bay Rays",
+    "score": "4-2",
+    "fmvp": "Corey Seager",
+    "mvpAL": "José Abreu",
+    "mvpNL": "Freddie Freeman",
+    "note": "Played entirely at a neutral site in Texas during the pandemic-shortened season, ending the Dodgers' 32-year wait."
+  },
+  {
+    "season": 2021,
+    "label": "2021 World Series",
+    "champ": "Atlanta Braves",
+    "runner": "Houston Astros",
+    "score": "4-2",
+    "fmvp": "Jorge Soler",
+    "mvpAL": "Shohei Ohtani",
+    "mvpNL": "Bryce Harper",
+    "note": "Atlanta won despite finishing 88-73, and Jorge Soler homered on the first pitch of Game 6."
+  },
+  {
+    "season": 2022,
+    "label": "2022 World Series",
+    "champ": "Houston Astros",
+    "runner": "Philadelphia Phillies",
+    "score": "4-2",
+    "fmvp": "Jeremy Peña",
+    "mvpAL": "Aaron Judge",
+    "mvpNL": "Paul Goldschmidt",
+    "note": "Houston threw the second combined no-hitter in postseason history in Game 4, and Dusty Baker won his first title as a manager."
+  },
+  {
+    "season": 2023,
+    "label": "2023 World Series",
+    "champ": "Texas Rangers",
+    "runner": "Arizona Diamondbacks",
+    "score": "4-1",
+    "fmvp": "Corey Seager",
+    "mvpAL": "Shohei Ohtani",
+    "mvpNL": "Ronald Acuña Jr.",
+    "note": "Texas won its first championship in franchise history, going a perfect 11-0 on the road in the postseason."
+  },
+  {
+    "season": 2024,
+    "label": "2024 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "New York Yankees",
+    "score": "4-1",
+    "fmvp": "Freddie Freeman",
+    "mvpAL": "Aaron Judge",
+    "mvpNL": "Shohei Ohtani",
+    "note": "The Dodgers overcame a five-run deficit in the clinching Game 5 at Yankee Stadium, with Freddie Freeman homering in the first four games."
+  },
+  {
+    "season": 2025,
+    "label": "2025 World Series",
+    "champ": "Los Angeles Dodgers",
+    "runner": "Toronto Blue Jays",
+    "score": "4-3",
+    "fmvp": "Yoshinobu Yamamoto",
+    "mvpAL": "Aaron Judge",
+    "mvpNL": "Shohei Ohtani",
+    "note": "The Dodgers became the first repeat champions since the 1998-2000 Yankees, winning Game 7 in 11 innings after Miguel Rojas tied it with a ninth-inning homer."
+  }
+];
+window.NBA=[
+  {
+    "season": 1947,
+    "label": "1947 NBA Finals",
+    "champ": "Philadelphia Warriors",
+    "runner": "Chicago Stags",
+    "score": "4-1",
+    "note": "The first championship of the Basketball Association of America, the NBA's direct predecessor; Warriors scoring champion Joe Fulks led the way and Howie Dallmar's late jumper sealed the clincher."
+  },
+  {
+    "season": 1948,
+    "label": "1948 NBA Finals",
+    "champ": "Baltimore Bullets",
+    "runner": "Philadelphia Warriors",
+    "score": "4-2",
+    "note": "A BAA season: the Bullets had joined from the rival ABL and won the title in their very first BAA year, Baltimore's first pro sports championship."
+  },
+  {
+    "season": 1949,
+    "label": "1949 NBA Finals",
+    "champ": "Minneapolis Lakers",
+    "runner": "Washington Capitols",
+    "score": "4-2",
+    "note": "The last BAA season before the merger with the NBL created the NBA; George Mikan averaged over 30 points a game in the series."
+  },
+  {
+    "season": 1950,
+    "label": "1950 NBA Finals",
+    "champ": "Minneapolis Lakers",
+    "runner": "Syracuse Nationals",
+    "score": "4-2",
+    "note": "The first season under the NBA name, after the BAA absorbed the National Basketball League."
+  },
+  {
+    "season": 1951,
+    "label": "1951 NBA Finals",
+    "champ": "Rochester Royals",
+    "runner": "New York Knicks",
+    "score": "4-3",
+    "note": "The Royals' only championship, and the last title won by a Rochester team before the franchise's long move toward Sacramento."
+  },
+  {
+    "season": 1952,
+    "label": "1952 NBA Finals",
+    "champ": "Minneapolis Lakers",
+    "runner": "New York Knicks",
+    "score": "4-3",
+    "note": "The first Finals played with the 12-foot lane, widened largely to blunt George Mikan."
+  },
+  {
+    "season": 1953,
+    "label": "1953 NBA Finals",
+    "champ": "Minneapolis Lakers",
+    "runner": "New York Knicks",
+    "score": "4-1",
+    "note": "Minneapolis won a third straight title, pro basketball's first three-peat."
+  },
+  {
+    "season": 1954,
+    "label": "1954 NBA Finals",
+    "champ": "Minneapolis Lakers",
+    "runner": "Syracuse Nationals",
+    "score": "4-3",
+    "note": "The Lakers' fifth title in six years closed out the Mikan dynasty; he retired the following autumn."
+  },
+  {
+    "season": 1955,
+    "label": "1955 NBA Finals",
+    "champ": "Syracuse Nationals",
+    "runner": "Fort Wayne Pistons",
+    "score": "4-3",
+    "note": "The first Finals played with the new 24-second shot clock; Syracuse won Game 7 by a single point."
+  },
+  {
+    "season": 1956,
+    "label": "1956 NBA Finals",
+    "champ": "Philadelphia Warriors",
+    "runner": "Fort Wayne Pistons",
+    "score": "4-1",
+    "mvp": "Bob Pettit",
+    "note": "Paul Arizin and Neil Johnston gave Philadelphia its second title, the franchise's last before moving to San Francisco in 1962."
+  },
+  {
+    "season": 1957,
+    "label": "1957 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "St. Louis Hawks",
+    "score": "4-3",
+    "mvp": "Bob Cousy",
+    "note": "Rookie Bill Russell's first title came in a double-overtime Game 7 decided by two points, launching the Celtics dynasty."
+  },
+  {
+    "season": 1958,
+    "label": "1958 NBA Finals",
+    "champ": "St. Louis Hawks",
+    "runner": "Boston Celtics",
+    "score": "4-2",
+    "mvp": "Bill Russell",
+    "note": "Bob Pettit scored 50 in the clinching Game 6, including 19 of the Hawks' last 21 points; it remains St. Louis's only NBA championship."
+  },
+  {
+    "season": 1959,
+    "label": "1959 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Minneapolis Lakers",
+    "score": "4-0",
+    "mvp": "Bob Pettit",
+    "note": "The first sweep in Finals history, and the first Celtics-Lakers Finals meeting; Boston began a run of eight straight titles."
+  },
+  {
+    "season": 1960,
+    "label": "1960 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "St. Louis Hawks",
+    "score": "4-3",
+    "mvp": "Wilt Chamberlain",
+    "note": "Wilt Chamberlain's rookie season ended with Boston beating St. Louis in a Game 7 rematch of the previous year's upset."
+  },
+  {
+    "season": 1961,
+    "label": "1961 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "St. Louis Hawks",
+    "score": "4-1",
+    "mvp": "Bill Russell",
+    "note": "Boston's third straight title; the Celtics beat the Hawks in the Finals for the fourth time in five years."
+  },
+  {
+    "season": 1962,
+    "label": "1962 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-3",
+    "mvp": "Bill Russell",
+    "note": "Frank Selvy's potential series-winning jumper rimmed out at the buzzer of Game 7, and Boston won in overtime."
+  },
+  {
+    "season": 1963,
+    "label": "1963 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-2",
+    "mvp": "Bill Russell",
+    "note": "Bob Cousy's farewell season ended with a title, Boston's fifth in a row."
+  },
+  {
+    "season": 1964,
+    "label": "1964 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "San Francisco Warriors",
+    "score": "4-1",
+    "mvp": "Oscar Robertson",
+    "note": "Boston beat Wilt Chamberlain's Warriors; the Celtics started five future Hall of Famers."
+  },
+  {
+    "season": 1965,
+    "label": "1965 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-1",
+    "mvp": "Bill Russell",
+    "note": "The title run is remembered for John Havlicek's steal against Philadelphia in the Eastern final - 'Havlicek stole the ball!'"
+  },
+  {
+    "season": 1966,
+    "label": "1966 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-3",
+    "mvp": "Wilt Chamberlain",
+    "note": "Red Auerbach's last game as coach; Boston's eighth consecutive championship, a record no team has approached."
+  },
+  {
+    "season": 1967,
+    "label": "1967 NBA Finals",
+    "champ": "Philadelphia 76ers",
+    "runner": "San Francisco Warriors",
+    "score": "4-2",
+    "mvp": "Wilt Chamberlain",
+    "note": "Wilt Chamberlain's 68-13 Sixers ended Boston's streak; the team is still cited among the greatest ever assembled."
+  },
+  {
+    "season": 1968,
+    "label": "1968 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-2",
+    "mvp": "Wilt Chamberlain",
+    "note": "Boston came back from a 3-1 deficit against Philadelphia in the East final, then beat Los Angeles for the title."
+  },
+  {
+    "season": 1969,
+    "label": "1969 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-3",
+    "fmvp": "Jerry West",
+    "mvp": "Wes Unseld",
+    "note": "Bill Russell's 11th and final title; Jerry West won the first Finals MVP despite playing for the losing Lakers, still the only man to do so."
+  },
+  {
+    "season": 1970,
+    "label": "1970 NBA Finals",
+    "champ": "New York Knicks",
+    "runner": "Los Angeles Lakers",
+    "score": "4-3",
+    "fmvp": "Willis Reed",
+    "mvp": "Willis Reed",
+    "note": "An injured Willis Reed limped out for Game 7 and hit his first two shots, igniting the Knicks to their first championship."
+  },
+  {
+    "season": 1971,
+    "label": "1971 NBA Finals",
+    "champ": "Milwaukee Bucks",
+    "runner": "Baltimore Bullets",
+    "score": "4-0",
+    "fmvp": "Kareem Abdul-Jabbar",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "Lew Alcindor, soon to be Kareem Abdul-Jabbar, swept the Bullets to give Milwaukee a title in only the franchise's third season."
+  },
+  {
+    "season": 1972,
+    "label": "1972 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "New York Knicks",
+    "score": "4-1",
+    "fmvp": "Wilt Chamberlain",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "The Lakers won a record 33 straight games during the regular season, then finally delivered Jerry West a championship."
+  },
+  {
+    "season": 1973,
+    "label": "1973 NBA Finals",
+    "champ": "New York Knicks",
+    "runner": "Los Angeles Lakers",
+    "score": "4-1",
+    "fmvp": "Willis Reed",
+    "mvp": "Dave Cowens",
+    "note": "New York's second title in four years and, until 2026, the last championship the Knicks would win."
+  },
+  {
+    "season": 1974,
+    "label": "1974 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Milwaukee Bucks",
+    "score": "4-3",
+    "fmvp": "John Havlicek",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "Boston beat Kareem Abdul-Jabbar's Bucks in seven after Milwaukee won Game 6 in double overtime on a Kareem skyhook."
+  },
+  {
+    "season": 1975,
+    "label": "1975 NBA Finals",
+    "champ": "Golden State Warriors",
+    "runner": "Washington Bullets",
+    "score": "4-0",
+    "fmvp": "Rick Barry",
+    "mvp": "Bob McAdoo",
+    "note": "A massive upset: Rick Barry's Warriors swept a Washington team that had won 60 games."
+  },
+  {
+    "season": 1976,
+    "label": "1976 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Phoenix Suns",
+    "score": "4-2",
+    "fmvp": "Jo Jo White",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "The Finals included the celebrated triple-overtime Game 5 at Boston Garden, often called the greatest game ever played."
+  },
+  {
+    "season": 1977,
+    "label": "1977 NBA Finals",
+    "champ": "Portland Trail Blazers",
+    "runner": "Philadelphia 76ers",
+    "score": "4-2",
+    "fmvp": "Bill Walton",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "Portland lost the first two games, then won four straight behind Bill Walton for the Blazers' only championship."
+  },
+  {
+    "season": 1978,
+    "label": "1978 NBA Finals",
+    "champ": "Washington Bullets",
+    "runner": "Seattle SuperSonics",
+    "score": "4-3",
+    "fmvp": "Wes Unseld",
+    "mvp": "Bill Walton",
+    "note": "Washington won Game 7 on the road; coach Dick Motta's borrowed line 'the opera ain't over till the fat lady sings' became the team's motto."
+  },
+  {
+    "season": 1979,
+    "label": "1979 NBA Finals",
+    "champ": "Seattle SuperSonics",
+    "runner": "Washington Bullets",
+    "score": "4-1",
+    "fmvp": "Dennis Johnson",
+    "mvp": "Moses Malone",
+    "note": "Seattle turned the tables on Washington a year later for the SuperSonics' only title before the franchise moved to Oklahoma City."
+  },
+  {
+    "season": 1980,
+    "label": "1980 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Philadelphia 76ers",
+    "score": "4-2",
+    "fmvp": "Magic Johnson",
+    "mvp": "Kareem Abdul-Jabbar",
+    "note": "Rookie Magic Johnson started at center for the injured Kareem Abdul-Jabbar in Game 6 and scored 42 points."
+  },
+  {
+    "season": 1981,
+    "label": "1981 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Houston Rockets",
+    "score": "4-2",
+    "fmvp": "Cedric Maxwell",
+    "mvp": "Julius Erving",
+    "note": "Boston erased a 3-1 deficit against Philadelphia in the East final; Cedric Maxwell, not Larry Bird, took Finals MVP."
+  },
+  {
+    "season": 1982,
+    "label": "1982 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Philadelphia 76ers",
+    "score": "4-2",
+    "fmvp": "Magic Johnson",
+    "mvp": "Moses Malone",
+    "note": "The Lakers' 'Showtime' era hit its stride with a second title in three years over the same Sixers opponent."
+  },
+  {
+    "season": 1983,
+    "label": "1983 NBA Finals",
+    "champ": "Philadelphia 76ers",
+    "runner": "Los Angeles Lakers",
+    "score": "4-0",
+    "fmvp": "Moses Malone",
+    "mvp": "Moses Malone",
+    "note": "Moses Malone predicted 'fo', fo', fo'' and the Sixers nearly delivered, going 12-1 in the playoffs and sweeping the Finals."
+  },
+  {
+    "season": 1984,
+    "label": "1984 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-3",
+    "fmvp": "Larry Bird",
+    "mvp": "Larry Bird",
+    "note": "The first Bird-versus-Magic Finals went seven games and is credited with reviving the league's popularity."
+  },
+  {
+    "season": 1985,
+    "label": "1985 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Boston Celtics",
+    "score": "4-2",
+    "fmvp": "Kareem Abdul-Jabbar",
+    "mvp": "Larry Bird",
+    "note": "The Lakers beat Boston in the Finals for the first time ever, ending a string of eight straight losses to the Celtics."
+  },
+  {
+    "season": 1986,
+    "label": "1986 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Houston Rockets",
+    "score": "4-2",
+    "fmvp": "Larry Bird",
+    "mvp": "Larry Bird",
+    "note": "The 67-win Celtics, with Bill Walton off the bench, are frequently rated among the greatest teams in league history."
+  },
+  {
+    "season": 1987,
+    "label": "1987 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Boston Celtics",
+    "score": "4-2",
+    "fmvp": "Magic Johnson",
+    "mvp": "Magic Johnson",
+    "note": "Magic Johnson's running 'junior, junior skyhook' won Game 4 with two seconds left."
+  },
+  {
+    "season": 1988,
+    "label": "1988 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Detroit Pistons",
+    "score": "4-3",
+    "fmvp": "James Worthy",
+    "mvp": "Michael Jordan",
+    "note": "Los Angeles became the first team in 19 years to repeat, surviving a Game 7 after Isiah Thomas scored 25 in a quarter on a sprained ankle."
+  },
+  {
+    "season": 1989,
+    "label": "1989 NBA Finals",
+    "champ": "Detroit Pistons",
+    "runner": "Los Angeles Lakers",
+    "score": "4-0",
+    "fmvp": "Joe Dumars",
+    "mvp": "Magic Johnson",
+    "note": "The Bad Boys swept the Lakers, who lost both Magic Johnson and Byron Scott to hamstring injuries."
+  },
+  {
+    "season": 1990,
+    "label": "1990 NBA Finals",
+    "champ": "Detroit Pistons",
+    "runner": "Portland Trail Blazers",
+    "score": "4-1",
+    "fmvp": "Isiah Thomas",
+    "mvp": "Magic Johnson",
+    "note": "Detroit repeated; Vinnie Johnson, nicknamed 'the Microwave,' hit the title-winning shot with 00.7 on the clock."
+  },
+  {
+    "season": 1991,
+    "label": "1991 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Los Angeles Lakers",
+    "score": "4-1",
+    "fmvp": "Michael Jordan",
+    "mvp": "Michael Jordan",
+    "note": "Michael Jordan's first championship, sealed by his famous mid-air hand switch layup in Game 2."
+  },
+  {
+    "season": 1992,
+    "label": "1992 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Portland Trail Blazers",
+    "score": "4-2",
+    "fmvp": "Michael Jordan",
+    "mvp": "Michael Jordan",
+    "note": "Jordan hit six three-pointers in the first half of Game 1 and shrugged at the scorer's table."
+  },
+  {
+    "season": 1993,
+    "label": "1993 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Phoenix Suns",
+    "score": "4-2",
+    "fmvp": "Michael Jordan",
+    "mvp": "Charles Barkley",
+    "note": "Chicago's first three-peat ended on John Paxson's three-pointer with 3.9 seconds left in Game 6."
+  },
+  {
+    "season": 1994,
+    "label": "1994 NBA Finals",
+    "champ": "Houston Rockets",
+    "runner": "New York Knicks",
+    "score": "4-3",
+    "fmvp": "Hakeem Olajuwon",
+    "mvp": "Hakeem Olajuwon",
+    "note": "With Jordan playing minor-league baseball, Hakeem Olajuwon outdueled Patrick Ewing in a seven-game series."
+  },
+  {
+    "season": 1995,
+    "label": "1995 NBA Finals",
+    "champ": "Houston Rockets",
+    "runner": "Orlando Magic",
+    "score": "4-0",
+    "fmvp": "Hakeem Olajuwon",
+    "mvp": "David Robinson",
+    "note": "Houston became the lowest seed ever to win the title, sweeping Shaquille O'Neal's Magic as a sixth seed."
+  },
+  {
+    "season": 1996,
+    "label": "1996 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Seattle SuperSonics",
+    "score": "4-2",
+    "fmvp": "Michael Jordan",
+    "mvp": "Michael Jordan",
+    "note": "Chicago won a then-record 72 regular season games before taking the title."
+  },
+  {
+    "season": 1997,
+    "label": "1997 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Utah Jazz",
+    "score": "4-2",
+    "fmvp": "Michael Jordan",
+    "mvp": "Karl Malone",
+    "note": "Jordan played Game 5 in Utah while badly ill, scoring 38 in what became known as the 'Flu Game.'"
+  },
+  {
+    "season": 1998,
+    "label": "1998 NBA Finals",
+    "champ": "Chicago Bulls",
+    "runner": "Utah Jazz",
+    "score": "4-2",
+    "fmvp": "Michael Jordan",
+    "mvp": "Michael Jordan",
+    "note": "Jordan's last shot as a Bull, a jumper over Bryon Russell with 5.2 seconds left, finished the second three-peat."
+  },
+  {
+    "season": 1999,
+    "label": "1999 NBA Finals",
+    "champ": "San Antonio Spurs",
+    "runner": "New York Knicks",
+    "score": "4-1",
+    "fmvp": "Tim Duncan",
+    "mvp": "Karl Malone",
+    "note": "In the lockout-shortened 50-game season, Tim Duncan and David Robinson won San Antonio's first championship."
+  },
+  {
+    "season": 2000,
+    "label": "2000 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Indiana Pacers",
+    "score": "4-2",
+    "fmvp": "Shaquille O'Neal",
+    "mvp": "Shaquille O'Neal",
+    "note": "Shaquille O'Neal swept the regular season MVP, Finals MVP and All-Star MVP in the same year."
+  },
+  {
+    "season": 2001,
+    "label": "2001 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Philadelphia 76ers",
+    "score": "4-1",
+    "fmvp": "Shaquille O'Neal",
+    "mvp": "Allen Iverson",
+    "note": "The Lakers went 15-1 in the playoffs, the best postseason record in NBA history."
+  },
+  {
+    "season": 2002,
+    "label": "2002 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "New Jersey Nets",
+    "score": "4-0",
+    "fmvp": "Shaquille O'Neal",
+    "mvp": "Tim Duncan",
+    "note": "A third straight title for the Shaq-and-Kobe Lakers, the league's most recent three-peat."
+  },
+  {
+    "season": 2003,
+    "label": "2003 NBA Finals",
+    "champ": "San Antonio Spurs",
+    "runner": "New Jersey Nets",
+    "score": "4-2",
+    "fmvp": "Tim Duncan",
+    "mvp": "Tim Duncan",
+    "note": "David Robinson retired a champion, scoring 13 points and grabbing 17 rebounds in his final game."
+  },
+  {
+    "season": 2004,
+    "label": "2004 NBA Finals",
+    "champ": "Detroit Pistons",
+    "runner": "Los Angeles Lakers",
+    "score": "4-1",
+    "fmvp": "Chauncey Billups",
+    "mvp": "Kevin Garnett",
+    "note": "Detroit, with no superstar and four All-Star-caliber role players, upset a Lakers team featuring four future Hall of Famers."
+  },
+  {
+    "season": 2005,
+    "label": "2005 NBA Finals",
+    "champ": "San Antonio Spurs",
+    "runner": "Detroit Pistons",
+    "score": "4-3",
+    "fmvp": "Tim Duncan",
+    "mvp": "Steve Nash",
+    "note": "The last Finals to go seven games for a decade; Robert Horry's Game 5 three in overtime swung the series."
+  },
+  {
+    "season": 2006,
+    "label": "2006 NBA Finals",
+    "champ": "Miami Heat",
+    "runner": "Dallas Mavericks",
+    "score": "4-2",
+    "fmvp": "Dwyane Wade",
+    "mvp": "Steve Nash",
+    "note": "Dallas led 2-0 before Dwyane Wade averaged nearly 35 points over four straight Miami wins."
+  },
+  {
+    "season": 2007,
+    "label": "2007 NBA Finals",
+    "champ": "San Antonio Spurs",
+    "runner": "Cleveland Cavaliers",
+    "score": "4-0",
+    "fmvp": "Tony Parker",
+    "mvp": "Dirk Nowitzki",
+    "note": "San Antonio's fourth title in nine years came in LeBron James's first Finals appearance."
+  },
+  {
+    "season": 2008,
+    "label": "2008 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Los Angeles Lakers",
+    "score": "4-2",
+    "fmvp": "Paul Pierce",
+    "mvp": "Kobe Bryant",
+    "note": "Boston's 'Big Three' of Pierce, Garnett and Allen won the title in the team's first year together, closing with a 39-point Game 6 rout."
+  },
+  {
+    "season": 2009,
+    "label": "2009 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Orlando Magic",
+    "score": "4-1",
+    "fmvp": "Kobe Bryant",
+    "mvp": "LeBron James",
+    "note": "Kobe Bryant's first championship without Shaquille O'Neal."
+  },
+  {
+    "season": 2010,
+    "label": "2010 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Boston Celtics",
+    "score": "4-3",
+    "fmvp": "Kobe Bryant",
+    "mvp": "LeBron James",
+    "note": "A rock-fight Game 7 against Boston ended 83-79; the Lakers trailed by 13 in the third quarter."
+  },
+  {
+    "season": 2011,
+    "label": "2011 NBA Finals",
+    "champ": "Dallas Mavericks",
+    "runner": "Miami Heat",
+    "score": "4-2",
+    "fmvp": "Dirk Nowitzki",
+    "mvp": "Derrick Rose",
+    "note": "Dirk Nowitzki carried Dallas past the newly formed Miami superteam for the Mavericks' only title."
+  },
+  {
+    "season": 2012,
+    "label": "2012 NBA Finals",
+    "champ": "Miami Heat",
+    "runner": "Oklahoma City Thunder",
+    "score": "4-1",
+    "fmvp": "LeBron James",
+    "mvp": "LeBron James",
+    "note": "LeBron James won his first championship in his ninth season."
+  },
+  {
+    "season": 2013,
+    "label": "2013 NBA Finals",
+    "champ": "Miami Heat",
+    "runner": "San Antonio Spurs",
+    "score": "4-3",
+    "fmvp": "LeBron James",
+    "mvp": "LeBron James",
+    "note": "Ray Allen's corner three with 5.2 seconds left in Game 6 saved Miami's season and forced a Game 7 they won."
+  },
+  {
+    "season": 2014,
+    "label": "2014 NBA Finals",
+    "champ": "San Antonio Spurs",
+    "runner": "Miami Heat",
+    "score": "4-1",
+    "fmvp": "Kawhi Leonard",
+    "mvp": "Kevin Durant",
+    "note": "San Antonio avenged the previous year with a display of ball movement, winning four games by an average of nearly 18 points."
+  },
+  {
+    "season": 2015,
+    "label": "2015 NBA Finals",
+    "champ": "Golden State Warriors",
+    "runner": "Cleveland Cavaliers",
+    "score": "4-2",
+    "fmvp": "Andre Iguodala",
+    "mvp": "Stephen Curry",
+    "note": "Golden State's first title in 40 years; Andre Iguodala came off the bench all season and won Finals MVP."
+  },
+  {
+    "season": 2016,
+    "label": "2016 NBA Finals",
+    "champ": "Cleveland Cavaliers",
+    "runner": "Golden State Warriors",
+    "score": "4-3",
+    "fmvp": "LeBron James",
+    "mvp": "Stephen Curry",
+    "note": "Cleveland became the first team to come back from 3-1 down in the Finals, capped by LeBron James's chase-down block on Andre Iguodala."
+  },
+  {
+    "season": 2017,
+    "label": "2017 NBA Finals",
+    "champ": "Golden State Warriors",
+    "runner": "Cleveland Cavaliers",
+    "score": "4-1",
+    "fmvp": "Kevin Durant",
+    "mvp": "Russell Westbrook",
+    "note": "Golden State, with Kevin Durant added, went 16-1 in the playoffs, the best postseason winning percentage ever."
+  },
+  {
+    "season": 2018,
+    "label": "2018 NBA Finals",
+    "champ": "Golden State Warriors",
+    "runner": "Cleveland Cavaliers",
+    "score": "4-0",
+    "fmvp": "Kevin Durant",
+    "mvp": "James Harden",
+    "note": "J.R. Smith dribbled out the clock in a tied Game 1, and the Warriors swept from there."
+  },
+  {
+    "season": 2019,
+    "label": "2019 NBA Finals",
+    "champ": "Toronto Raptors",
+    "runner": "Golden State Warriors",
+    "score": "4-2",
+    "fmvp": "Kawhi Leonard",
+    "mvp": "Giannis Antetokounmpo",
+    "note": "Toronto became the first team outside the United States to win the NBA title, after Kawhi Leonard's bouncing buzzer-beater earlier that postseason."
+  },
+  {
+    "season": 2020,
+    "label": "2020 NBA Finals",
+    "champ": "Los Angeles Lakers",
+    "runner": "Miami Heat",
+    "score": "4-2",
+    "fmvp": "LeBron James",
+    "mvp": "Giannis Antetokounmpo",
+    "note": "Played in the Orlando 'bubble' during the COVID-19 pandemic, months after Kobe Bryant's death."
+  },
+  {
+    "season": 2021,
+    "label": "2021 NBA Finals",
+    "champ": "Milwaukee Bucks",
+    "runner": "Phoenix Suns",
+    "score": "4-2",
+    "fmvp": "Giannis Antetokounmpo",
+    "mvp": "Nikola Jokic",
+    "note": "Giannis Antetokounmpo scored 50 in the clinching Game 6 for Milwaukee's first title in 50 years."
+  },
+  {
+    "season": 2022,
+    "label": "2022 NBA Finals",
+    "champ": "Golden State Warriors",
+    "runner": "Boston Celtics",
+    "score": "4-2",
+    "fmvp": "Stephen Curry",
+    "mvp": "Nikola Jokic",
+    "note": "Stephen Curry finally won Finals MVP, in Golden State's fourth championship in eight seasons."
+  },
+  {
+    "season": 2023,
+    "label": "2023 NBA Finals",
+    "champ": "Denver Nuggets",
+    "runner": "Miami Heat",
+    "score": "4-1",
+    "fmvp": "Nikola Jokic",
+    "mvp": "Joel Embiid",
+    "note": "Denver's first championship; Nikola Jokic averaged a triple-double for the postseason."
+  },
+  {
+    "season": 2024,
+    "label": "2024 NBA Finals",
+    "champ": "Boston Celtics",
+    "runner": "Dallas Mavericks",
+    "score": "4-1",
+    "fmvp": "Jaylen Brown",
+    "mvp": "Nikola Jokic",
+    "note": "Boston's record 18th championship moved the Celtics past the Lakers for the most all time."
+  },
+  {
+    "season": 2025,
+    "label": "2025 NBA Finals",
+    "champ": "Oklahoma City Thunder",
+    "runner": "Indiana Pacers",
+    "score": "4-3",
+    "fmvp": "Shai Gilgeous-Alexander",
+    "mvp": "Shai Gilgeous-Alexander",
+    "note": "Oklahoma City's first title since the franchise's move from Seattle; Shai Gilgeous-Alexander swept regular season MVP and Finals MVP."
+  },
+  {
+    "season": 2026,
+    "label": "2026 NBA Finals",
+    "champ": "New York Knicks",
+    "runner": "San Antonio Spurs",
+    "score": "4-1",
+    "fmvp": "Jalen Brunson",
+    "mvp": "Shai Gilgeous-Alexander",
+    "note": "New York ended a 53-year title drought, the longest in NBA history, after erasing a record 29-point deficit in Game 4."
+  }
+];
 </script>
 <script>
 (function(){
@@ -13821,7 +16424,8 @@ window.EVENTS=[
   var DATA=window.DATA, GEO=window.GEO, FLAGS=window.FLAGS, FEATURES=window.FEATURES,
       PRES=window.PRESIDENTS, ELEM=window.ELEMENTS, STATES=window.STATES, USGEO=window.STATESGEO,
       LEADERS=window.LEADERS, LIT=window.LITERATURE, SHK=window.SHAKESPEARE, ART=window.ART,
-      MYTH=window.MYTHOLOGY, PAV=window.PAVLOVS, CL=window.CLASSICAL, EVENTS=window.EVENTS;
+      MYTH=window.MYTHOLOGY, PAV=window.PAVLOVS, CL=window.CLASSICAL, EVENTS=window.EVENTS,
+      NFL=window.NFL, MLB=window.MLB, NBA=window.NBA;
 
   var el=function(id){return document.getElementById(id);};
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
@@ -13852,6 +16456,10 @@ window.EVENTS=[
   var PAVCATS=['Music','Literature','Art','History','Science','Geography','Mythology','Language','Misc'];
   var EVERAS=[['ancient','Ancient'],['medieval','Medieval'],['earlymodern','Early modern'],
               ['c19','19th century'],['c20','20th century'],['now','Contemporary']];
+  var SPERAS=[['pre60','Before 1960'],['c6070','1960s–70s'],['c8090','1980s–90s'],
+              ['c0010','2000s–10s'],['c20s','2020s']];
+  function spEra(d){ var y=d.season; return y<1960?'pre60':y<1980?'c6070':y<2000?'c8090':y<2020?'c0010':'c20s'; }
+  var SPMETA={nfl:{name:'NFL',fm:'Super Bowl MVP'},mlb:{name:'MLB',fm:'World Series MVP'},nba:{name:'NBA',fm:'Finals MVP'}};
 
   function presEra(p){ return p.start<1837?'found':p.start<1901?'c19':p.start<1961?'mod':'now'; }
   function egrps(e){ var g=[]; if(e.common) g.push('common');
@@ -13885,10 +16493,17 @@ window.EVENTS=[
     {id:'elements',fam:'sci',name:'Periodic table',note:'hydrogen to oganesson',data:ELEM,idf:function(d){return String(d.z);},
      filt:{key:'egrp',label:'Groups',opts:EGRPS,of:egrps}},
     {id:'pavlovs',fam:'refl',name:'Pavlovs',note:'stock pairs you should buzz on reflex',data:PAV,idf:function(d){return d.id;},
-     filt:{key:'pavcat',label:'Areas',opts:PAVCATS.map(function(c){return [c,c];}),of:function(d){return [d.cat];}}}
+     filt:{key:'pavcat',label:'Areas',opts:PAVCATS.map(function(c){return [c,c];}),of:function(d){return [d.cat];}}},
+    {id:'nfl',fam:'sport',name:'NFL',note:'Super Bowls and MVPs',data:NFL,idf:function(d){return String(d.season);},
+     filt:{key:'nflera',label:'Eras',opts:SPERAS,of:function(d){return [spEra(d)];}}},
+    {id:'mlb',fam:'sport',name:'MLB',note:'World Series and MVPs',data:MLB,idf:function(d){return String(d.season);},
+     filt:{key:'mlbera',label:'Eras',opts:SPERAS,of:function(d){return [spEra(d)];}}},
+    {id:'nba',fam:'sport',name:'NBA',note:'Finals and MVPs',data:NBA,idf:function(d){return String(d.season);},
+     filt:{key:'nbaera',label:'Eras',opts:SPERAS,of:function(d){return [spEra(d)];}}}
   ];
   var FAMILIES=[{id:'geo',name:'Geography'},{id:'hist',name:'History & leaders'},
-    {id:'arts',name:'Arts & letters'},{id:'sci',name:'Science'},{id:'refl',name:'Jeopardy reflexes'}];
+    {id:'arts',name:'Arts & letters'},{id:'sci',name:'Science'},
+    {id:'sport',name:'Sports'},{id:'refl',name:'Jeopardy reflexes'}];
   var SUB={}; SUBJECTS.forEach(function(s){ SUB[s.id]=s; });
 
   var TYPES=[
@@ -13931,7 +16546,19 @@ window.EVENTS=[
     {id:'el-name',s:'elements',k:'Elements · name to symbol',q:'What'},
     {id:'el-pos',s:'elements',k:'Elements · place in the table',q:'What'},
     {id:'el-lore',s:'elements',k:'Elements · origins & lore',q:'What'},
-    {id:'pav',s:'pavlovs',k:'Pavlovs · buzz on reflex',q:'Both'}
+    {id:'pav',s:'pavlovs',k:'Pavlovs · buzz on reflex',q:'Both'},
+    {id:'nfl-champ',s:'nfl',k:'NFL · who won it',q:'What'},
+    {id:'nfl-runner',s:'nfl',k:'NFL · who they beat',q:'What'},
+    {id:'nfl-fmvp',s:'nfl',k:'NFL · series MVP',q:'Who',pick:function(d){return !!d.fmvp;}},
+    {id:'nfl-mvp',s:'nfl',k:'NFL · league MVP',q:'Who',pick:function(d){return !!(d.mvp||d.mvpAL);}},
+    {id:'mlb-champ',s:'mlb',k:'MLB · who won it',q:'What'},
+    {id:'mlb-runner',s:'mlb',k:'MLB · who they beat',q:'What'},
+    {id:'mlb-fmvp',s:'mlb',k:'MLB · series MVP',q:'Who',pick:function(d){return !!d.fmvp;}},
+    {id:'mlb-mvp',s:'mlb',k:'MLB · league MVP',q:'Who',pick:function(d){return !!(d.mvp||d.mvpAL);}},
+    {id:'nba-champ',s:'nba',k:'NBA · who won it',q:'What'},
+    {id:'nba-runner',s:'nba',k:'NBA · who they beat',q:'What'},
+    {id:'nba-fmvp',s:'nba',k:'NBA · series MVP',q:'Who',pick:function(d){return !!d.fmvp;}},
+    {id:'nba-mvp',s:'nba',k:'NBA · league MVP',q:'Who',pick:function(d){return !!(d.mvp||d.mvpAL);}}
   ];
   var TY={}; TYPES.forEach(function(t){ TY[t.id]=t; });
   var CHIPS=[
@@ -13972,7 +16599,19 @@ window.EVENTS=[
     {id:'el-sym',s:'elements',label:'Symbol ↔ name',t:['el-sym','el-name']},
     {id:'el-pos',s:'elements',label:'Place in the table',t:['el-pos']},
     {id:'el-lore',s:'elements',label:'Origins & lore',t:['el-lore']},
-    {id:'pav',s:'pavlovs',label:'All reflex pairs',t:['pav']}
+    {id:'pav',s:'pavlovs',label:'All reflex pairs',t:['pav']},
+    {id:'nfl-champ',s:'nfl',label:'Champions',t:['nfl-champ']},
+    {id:'nfl-runner',s:'nfl',label:'Runners-up',t:['nfl-runner']},
+    {id:'nfl-fmvp',s:'nfl',label:'Series MVP',t:['nfl-fmvp']},
+    {id:'nfl-mvp',s:'nfl',label:'League MVP',t:['nfl-mvp']},
+    {id:'mlb-champ',s:'mlb',label:'Champions',t:['mlb-champ']},
+    {id:'mlb-runner',s:'mlb',label:'Runners-up',t:['mlb-runner']},
+    {id:'mlb-fmvp',s:'mlb',label:'Series MVP',t:['mlb-fmvp']},
+    {id:'mlb-mvp',s:'mlb',label:'League MVP',t:['mlb-mvp']},
+    {id:'nba-champ',s:'nba',label:'Champions',t:['nba-champ']},
+    {id:'nba-runner',s:'nba',label:'Runners-up',t:['nba-runner']},
+    {id:'nba-fmvp',s:'nba',label:'Series MVP',t:['nba-fmvp']},
+    {id:'nba-mvp',s:'nba',label:'League MVP',t:['nba-mvp']}
   ];
 
   var IDX={};
@@ -13980,7 +16619,7 @@ window.EVENTS=[
 
   /* ------------------------------------------------ storage -------------- */
   var KEY='atlas-drill/v1';
-  var store={v:3,subj:{},chips:{},filt:{},opts:{timer:0,qform:false},cards:{},streak:0,lastDay:null};
+  var store={v:3,subj:{},chips:{},filt:{},opts:{timer:0,qform:false,cram:false},cards:{},streak:0,lastDay:null};
   SUBJECTS.forEach(function(s){
     store.subj[s.id]=true;
     store.filt[s.filt.key]={};
@@ -14007,7 +16646,7 @@ window.EVENTS=[
         if(p.filt) for(var f in p.filt) if(store.filt[f]) for(var k in p.filt[f]) if(store.filt[f].hasOwnProperty(k)) store.filt[f][k]=p.filt[f][k];
       }
       if(p.chips) for(var c in p.chips) if(store.chips.hasOwnProperty(c)) store.chips[c]=p.chips[c];
-      if(p.opts){ store.opts.timer=p.opts.timer||0; store.opts.qform=!!p.opts.qform; }
+      if(p.opts){ store.opts.timer=p.opts.timer||0; store.opts.qform=!!p.opts.qform; store.opts.cram=!!p.opts.cram; }
       store.cards=p.cards||{};
     } else {
       var MAP={c:'geo-cap',f:'geo-flag',l:'geo-loc'}, out={};
@@ -14058,6 +16697,7 @@ window.EVENTS=[
   var BOX_DAYS={1:0,2:1,3:3,4:7,5:21};
   var queue=[], lapse=[], served=0, lastWasLapse=false;
   var current=null, flipped=false, sessSeen=0, sessRight=0, extra=false, timedOut=false, entering=false;
+  var cramTotal=0, cramDone=0, cramLaps=0;
   function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;} return a; }
   function spread(list,win){
     var pool=list.slice(), out=[], recent=[];
@@ -14073,15 +16713,21 @@ window.EVENTS=[
   }
   function buildQueue(){
     var day=today(), all=deck();
+    if(store.opts.cram){
+      // Cram ignores the schedule: one shuffled lap through every card in the deck.
+      queue=spread(shuffle(all),8); cramTotal=queue.length; cramDone=0; lapse=[];
+      return;
+    }
     var due=shuffle(all.filter(function(k){ var r=rec(k); return r&&r.d<=day; }));
     var fresh=shuffle(all.filter(function(k){ return !rec(k); }));
     queue=spread(due,8).concat(spread(fresh,8));
     if(!queue.length&&extra){
-      queue=spread(shuffle(all).sort(function(a,b){ var ra=rec(a),rb=rec(b); return (ra?ra.b:0)-(rb?rb.b:0); }).slice(0,25),6);
+      queue=spread(shuffle(all).sort(function(a,b){ var ra=rec(a),rb=rec(b); return (ra?ra.b:0)-(rb?rb.b:0); }),8);
     }
   }
   function nextCard(){
     stopTimer();
+    if(store.opts.cram&&!queue.length){ if(cramTotal) cramLaps++; buildQueue(); }
     if(!queue.length&&!lapse.length) buildQueue();
     var useLapse=lapse.length&&((lapse[0].r<=served&&!lastWasLapse)||!queue.length);
     if(useLapse){ current=lapse.shift().k; lastWasLapse=true; }
@@ -14094,17 +16740,25 @@ window.EVENTS=[
   function grade(ok){
     if(!current||!flipped) return;
     stopTimer();
-    var day=today(), r=store.cards[current]||{b:0,d:day,seen:0,wrong:0};
-    r.seen++;
-    if(ok) r.b=Math.min((r.b||1)+1,5);
-    else { r.b=1; r.wrong++; lapse.push({k:current,r:served+6}); }
-    r.d=day+BOX_DAYS[r.b];
-    store.cards[current]=r;
+    var day=today();
+    if(store.opts.cram){
+      // Practice only — never creates a record, never moves a box or a due date.
+      var ex=store.cards[current];
+      if(ex){ ex.seen++; if(!ok) ex.wrong++; }
+      cramDone++;
+    } else {
+      var r=store.cards[current]||{b:0,d:day,seen:0,wrong:0};
+      r.seen++;
+      if(ok) r.b=Math.min((r.b||1)+1,5);
+      else { r.b=1; r.wrong++; lapse.push({k:current,r:served+6}); }
+      r.d=day+BOX_DAYS[r.b];
+      store.cards[current]=r;
+    }
     sessSeen++; if(ok) sessRight++;
     if(store.lastDay!==day){ store.streak=(store.lastDay===day-1)?store.streak+1:1; store.lastDay=day; }
     save(); nextCard();
   }
-  function resetQueue(){ clearCache(); lapse=[]; extra=false; buildQueue(); nextCard(); }
+  function resetQueue(){ clearCache(); lapse=[]; extra=false; cramLaps=0; buildQueue(); nextCard(); }
 
   /* ------------------------------------------------ timer ---------------- */
   var TIMERS=[0,15,10,5], tHandle=null;
@@ -14241,6 +16895,31 @@ window.EVENTS=[
     var p=parse(k), it=itemOf(k), F={front:'',back:'',tag:'',ftag:''};
     if(!it) return F;
     var t=p.t;
+    var sp=t.match(/^(nfl|mlb|nba)-(champ|runner|fmvp|mvp)$/);
+    if(sp){
+      var M=SPMETA[sp[1]];
+      if(sp[2]==='champ'){
+        F.front='<div class="prompt-kicker">Who won</div><div class="prompt">'+esc(it.label)+'</div>';
+        F.back=A(t,it.champ,'sm')+'<div class="answer-sub">beat <b>'+esc(it.runner)+'</b>, '+esc(it.score)+'</div>'+
+          '<div class="note">'+esc(it.note)+'</div>';
+      } else if(sp[2]==='runner'){
+        F.front='<div class="prompt-kicker">Who did they beat in '+esc(it.label)+'?</div><div class="prompt sm">'+esc(it.champ)+'</div>';
+        F.back=A(t,it.runner,'sm')+'<div class="answer-sub">'+esc(it.score)+'</div><div class="note">'+esc(it.note)+'</div>';
+      } else if(sp[2]==='fmvp'){
+        F.front='<div class="prompt-kicker">'+esc(M.fm)+'</div><div class="prompt">'+esc(it.label)+'</div>';
+        F.back=A(t,it.fmvp,'sm')+'<div class="answer-sub"><b>'+esc(it.champ)+'</b> over '+esc(it.runner)+', '+esc(it.score)+'</div>'+
+          '<div class="note">'+esc(it.note)+'</div>';
+      } else {
+        F.front='<div class="prompt-kicker">'+esc(M.name)+' league MVP</div><div class="prompt">'+it.season+'</div>';
+        F.back=(it.mvpAL
+            ? A(t,it.mvpAL,'sm')+'<div class="answer-sub">American League</div>'+
+              '<div class="answer sm" style="margin-top:7px">'+esc(it.mvpNL)+'</div><div class="answer-sub">National League</div>'
+            : A(t,it.mvp,'sm'))+
+          '<div class="note">That season\'s title went to the '+esc(it.champ)+' ('+esc(it.label)+').</div>';
+      }
+      if(sp[2]==='runner'||sp[2]==='mvp') F.tag=String(it.season);
+      return F;
+    }
     switch(t){
       case 'geo-cap':
         F.tag=it.s; F.ftag=it.s;
@@ -14477,6 +17156,7 @@ window.EVENTS=[
       case 'shakespeare': return it.play;
       case 'classical': return it.kind==='composer'?it.name:it.title;
       case 'pavlovs': return it.cue;
+      case 'nfl': case 'mlb': case 'nba': return it.label;
     }
     return '';
   }
@@ -14548,9 +17228,14 @@ window.EVENTS=[
     el('btn-good').classList.toggle('hidden',!flipped);
     el('btn-miss').innerHTML=timedOut?'Too slow <kbd>1</kbd>':'Missed it <kbd>1</kbd>';
     el('btn-good').innerHTML=timedOut?'I had it in time <kbd>2</kbd>':'Got it <kbd>2</kbd>';
-    el('hint').textContent=flipped
-      ? (timedOut?'The clock beat you — count it only if you truly had it.':'Be honest — missed cards come back later this session.')
-      : (store.opts.timer?'Buzz before the bar runs out.':'Space reveals the answer, then 1 missed · 2 got it');
+    if(store.opts.cram){
+      el('hint').textContent='Cram · card '+(cramDone+1)+' of '+cramTotal+
+        (cramLaps?' · lap '+(cramLaps+1):'')+' · review schedule paused';
+    } else {
+      el('hint').textContent=flipped
+        ? (timedOut?'The clock beat you — count it only if you truly had it.':'Be honest — missed cards come back later this session.')
+        : (store.opts.timer?'Buzz before the bar runs out.':'Space reveals the answer, then 1 missed · 2 got it');
+    }
   }
   function accuracy(keys){
     var seen=0,right=0;
@@ -14639,14 +17324,14 @@ window.EVENTS=[
     var gaps=deckGaps();
     el('deck-summary').innerHTML=live.length
       ? '<b>'+live.length+' deck'+(live.length===1?'':'s')+'</b> — '+esc(live.map(function(s){ return s.name; }).join(', '))+
-        ' <span class="cnt">· '+fmt(n)+' cards</span>'+
-        (gaps.length?' <span class="warn">· '+esc(gaps[0][0])+' has '+esc(gaps[0][1])+'</span>':'')
+        ' <span class="cnt">· '+fmt(n)+' cards</span>'
       : (gaps.length
           ? '<b>0 cards</b> <span class="warn">· '+esc(gaps[0][0])+' is on, but has '+esc(gaps[0][1])+'</span>'
           : '<b>Nothing selected</b> <span class="cnt">· pick at least one deck</span>');
     el('opt-timer').textContent='Clock: '+(store.opts.timer?store.opts.timer+'s':'off');
     el('opt-timer').setAttribute('aria-pressed',store.opts.timer?'true':'false');
     el('opt-qform').setAttribute('aria-pressed',store.opts.qform?'true':'false');
+    el('opt-cram').setAttribute('aria-pressed',store.opts.cram?'true':'false');
   }
   function miniPair(kind,val){
     return '<span class="mini"><button class="minibtn" data-on="'+kind+'" data-v="'+esc(val)+'">All</button>'+
@@ -14711,6 +17396,7 @@ window.EVENTS=[
     save(); renderDeckBar(); stopTimer(); if(!flipped&&current) startTimer();
   });
   el('opt-qform').addEventListener('click',function(){ store.opts.qform=!store.opts.qform; save(); render(); });
+  el('opt-cram').addEventListener('click',function(){ store.opts.cram=!store.opts.cram; save(); cramLaps=0; resetQueue(); });
   el('btn-leech').addEventListener('click',function(){
     if(!leechKeys.length) return;
     queue=shuffle(leechKeys.slice()); lapse=[]; nextCard();
@@ -14721,7 +17407,8 @@ window.EVENTS=[
   var REFS=[['countries','Countries'],['physical','Physical geography'],['states','U.S. states'],
     ['presidents','U.S. presidents'],['leaders','World leaders'],['events','Historic events'],['literature','Literature'],
     ['shakespeare','Shakespeare'],['art','Art'],['classical','Classical music'],
-    ['mythology','Mythology'],['elements','Periodic table'],['pavlovs','Pavlovs']];
+    ['mythology','Mythology'],['elements','Periodic table'],['pavlovs','Pavlovs'],
+    ['nfl','NFL champions'],['mlb','MLB champions'],['nba','NBA champions']];
   var refPick='countries';
   el('ref-pick').innerHTML=REFS.map(function(r){ return '<option value="'+r[0]+'">'+esc(r[1])+'</option>'; }).join('');
   var refSort={i:-1,dir:1};
@@ -14824,6 +17511,17 @@ window.EVENTS=[
       body.innerHTML=table([['Figure',function(d){ return esc(d.name); },'nm'],['Pantheon',function(d){ return esc(d.pantheon); }],
         ['Domain',function(d){ return esc(d.domain); }],['Counterpart',function(d){ return esc(d.counterpart||'—'); }]],
         f(MYTH,function(d){ return d.name+' '+d.domain+' '+(d.counterpart||'')+' '+d.pantheon; }));
+    } else if(refPick==='nfl'||refPick==='mlb'||refPick==='nba'){
+      var SD={nfl:NFL,mlb:MLB,nba:NBA}[refPick];
+      body.innerHTML=table([
+        ['Season',function(d){ return d.season; },'num',function(d){ return d.season; }],
+        ['Championship',function(d){ return esc(d.label); },'nm'],
+        ['Champion',function(d){ return esc(d.champ); },'nm'],
+        ['Runner-up',function(d){ return esc(d.runner); }],
+        ['Result',function(d){ return esc(d.score); },'num'],
+        ['Series MVP',function(d){ return esc(d.fmvp||'—'); }],
+        ['League MVP',function(d){ return esc(d.mvpAL?(d.mvpAL+' (AL) · '+d.mvpNL+' (NL)'):(d.mvp||'—')); }]],
+        f(SD,function(d){ return d.season+' '+d.label+' '+d.champ+' '+d.runner+' '+(d.fmvp||'')+' '+(d.mvp||'')+' '+(d.mvpAL||'')+' '+(d.mvpNL||''); }));
     } else {
       body.innerHTML=table([['Cue',function(d){ return esc(d.cue); },'nm'],['Answer',function(d){ return esc(d.ans); }],
         ['Area',function(d){ return esc(d.cat); }],['Note',function(d){ return d.note?'<span class="it">'+esc(d.note)+'</span>':''; }]],
